@@ -28,17 +28,10 @@ public class Villanos extends Super_X {
     public void setIndice_maldad(int indice_maldad) {
         this.indice_maldad = indice_maldad;
     }
-
-    /**
-     *
-     * @return
-     */
+    
     @Override
     public String toString() {
         return "Villanos{" + "indice_maldad=" + indice_maldad + '}';
     }
-    
-    
-       
     
 }

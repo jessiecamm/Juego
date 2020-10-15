@@ -58,15 +58,9 @@ public class Super_X {
         this.habilidad_ppal = habilidad_ppal;
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public String toString() {
         return "Super_X{" + "energia=" + energia + ", nombre=" + nombre + ", pais_origen=" + pais_origen + ", habilidad_ppal=" + habilidad_ppal + '}';
-    }
-    
-       
+    }   
     
 }
