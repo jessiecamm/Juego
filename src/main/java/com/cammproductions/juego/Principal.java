@@ -44,6 +44,8 @@ public class Principal {
                 v1.getHabilidad_ppal() + ".");
         System.out.println();
         
+        System.out.println("Aguante este equipo!!!\n");
+        System.out.println("Como verás, pude instalar y hacer mi branch, todo desde net!!!");
         
     }
     
