@@ -26,15 +26,7 @@ public class Super_X {
         this.habilidad_ppal = habilidad_ppal;
     }
 
-    public int getEnergia() {
-        return energia;
-    }
-
-    public void setEnergia(int energia) {
-        this.energia = energia;
-    }
-
-    public String getNombre() {
+     public String getNombre() {
         return nombre;
     }
 
