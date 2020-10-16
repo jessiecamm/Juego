@@ -29,9 +29,5 @@ public class Heroes extends Super_X {
         this.indice_bondad = indice_bondad;
     }
     
-    @Override
-    public String toString() {
-        return "Heroes{" + "indice_bondad=" + indice_bondad + '}';
-    }
      
 }
