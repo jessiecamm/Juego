@@ -20,7 +20,7 @@ public class Super_X {
     }
 
     public Super_X(int energia, String nombre, String pais_origen, String habilidad_ppal) {
-        this.energia = energia;
+        this.energia = 100;
         this.nombre = nombre;
         this.pais_origen = pais_origen;
         this.habilidad_ppal = habilidad_ppal;
