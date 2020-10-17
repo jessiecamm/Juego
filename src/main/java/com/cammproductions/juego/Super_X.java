@@ -52,7 +52,8 @@ public class Super_X {
 
     @Override
     public String toString() {
-        return "Super_X{" + "energia=" + energia + ", nombre=" + nombre + ", pais_origen=" + pais_origen + ", habilidad_ppal=" + habilidad_ppal + '}';
+        return "Super X >>> " + nombre + " - Pais de origen: " + pais_origen + 
+                " - Habilidad principal: " + habilidad_ppal + '.';
     }   
     
 }
