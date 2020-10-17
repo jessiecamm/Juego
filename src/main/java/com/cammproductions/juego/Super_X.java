@@ -20,21 +20,13 @@ public class Super_X {
     }
 
     public Super_X(int energia, String nombre, String pais_origen, String habilidad_ppal) {
-        this.energia = energia;
+        this.energia = 100;
         this.nombre = nombre;
         this.pais_origen = pais_origen;
         this.habilidad_ppal = habilidad_ppal;
     }
 
-    public int getEnergia() {
-        return energia;
-    }
-
-    public void setEnergia(int energia) {
-        this.energia = energia;
-    }
-
-    public String getNombre() {
+     public String getNombre() {
         return nombre;
     }
 
@@ -58,15 +50,10 @@ public class Super_X {
         this.habilidad_ppal = habilidad_ppal;
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public String toString() {
-        return "Super_X{" + "energia=" + energia + ", nombre=" + nombre + ", pais_origen=" + pais_origen + ", habilidad_ppal=" + habilidad_ppal + '}';
-    }
-    
-       
+        return "Super X >>> " + nombre + " - Pais de origen: " + pais_origen + 
+                " - Habilidad principal: " + habilidad_ppal + '.';
+    }   
     
 }

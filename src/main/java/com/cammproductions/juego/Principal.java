@@ -20,38 +20,46 @@ public class Principal {
         System.out.println("Mortal Kombat 2.0");
         System.out.println("By Camm & Marto");
         System.out.println();
+        System.out.println("Presentación de Personajes:");
+        System.out.println();
+        
         Heroes h1=new Heroes();
         h1.setPais_origen("Australia");
         h1.setNombre("Puño de Hierro");
-        h1.setEnergia(68);
         h1.setHabilidad_ppal("Super Puñetazo");
         h1.setIndice_bondad(10);
-
-        Heroes h2=new Heroes(72, "Llamarada", "Sudafrica", "Bola de Fuego", 8);
+        Heroes h2=new Heroes(100,8, "Halcón del desierto","Nueva Zelanda", "Ojos láser");
+        h2.setIndice_bondad(8);
         
-        System.out.println("El héroe " + h1.getNombre() + " de origen " + h1.getPais_origen() + 
-                " tiene una energía de " + h1.getEnergia() + " y su principal habilidad es el " +
-                h1.getHabilidad_ppal() + ".");
+        System.out.println("HEROES:");
+        System.out.println(h1.getNombre() + " es de " + h1.getPais_origen() + 
+                ", su principal habilidad es el " + h1.getHabilidad_ppal() + ".");
+        System.out.println("Índice de Bondad > "+ h1.getIndice_bondad());
+        System.out.println();
+                
+        System.out.println(h2.toString());
+        System.out.println("Índice de Bondad > "+ h2.getIndice_bondad());
         System.out.println();
         
         Villanos v1=new Villanos();
         v1.setNombre("Cruela");
-        v1.setEnergia(85);
         v1.setPais_origen("Italia");
-        v1.setHabilidad_ppal("Vuela muy alto");
+        v1.setHabilidad_ppal("vuela muy alto");
         v1.setIndice_maldad(10);
+        Villanos v2=new Villanos(100, 8, "Destructor", "Nueva York", "Fuerza extrema");
+        v2.setIndice_maldad(9);
         
-          System.out.println("El villano " + v1.getNombre() + " de origen " + v1.getPais_origen() + 
-                " tiene una energía de " + v1.getEnergia() + " y su principal habilidad es que " +
-                v1.getHabilidad_ppal() + ".");
+        System.out.println();      
+        System.out.println("VILLANOS:");
+        System.out.println(v1.getNombre() + " es de " + v1.getPais_origen() + 
+                ", como principal habilidad tiene " + v1.getHabilidad_ppal() + ".");
+        System.out.println("Índice de Maldad > "+ v1.getIndice_maldad());
         System.out.println();
+              
+        System.out.println(v2.getNombre() + " es de " + v2.getPais_origen() + 
+                ", su principal habilidad es que " + v2.getHabilidad_ppal() + ".");
+        System.out.println("Índice de Maldad > "+ v2.getIndice_maldad());
+        System.out.println();               
         
-        System.out.println("Aguante este equipo!!!\n");
-        System.out.println("Como verás, pude instalar y hacer mi branch, todo desde net!!!");
-        
-        System.out.println(h2.toString());
-    }
-    
-     
-    
+    }   
 }
