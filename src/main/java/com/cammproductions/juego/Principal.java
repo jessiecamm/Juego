@@ -28,7 +28,7 @@ public class Principal {
         h1.setNombre("Puño de Hierro");
         h1.setHabilidad_ppal("Super Puñetazo");
         h1.setIndice_bondad(10);
-        Heroes h2=new Heroes(100,8, "Halcón del desierto","Nueva Zelanda", "Ojos láser");
+        Heroes h2=new Heroes(8,100, "Halcón del desierto","Nueva Zelanda", "Ojos láser");
         h2.setIndice_bondad(8);
         
         System.out.println("HEROES:");
@@ -46,18 +46,18 @@ public class Principal {
         v1.setPais_origen("Italia");
         v1.setHabilidad_ppal("vuela muy alto");
         v1.setIndice_maldad(10);
-        Villanos v2=new Villanos(100, 8, "Destructor", "Nueva York", "Fuerza extrema");
+        Villanos v2=new Villanos(8, 100, "Destructor", "Nueva York", "Fuerza extrema");
         v2.setIndice_maldad(9);
         
         System.out.println();      
         System.out.println("VILLANOS:");
         System.out.println(v1.getNombre() + " es de " + v1.getPais_origen() + 
-                ", como principal habilidad tiene " + v1.getHabilidad_ppal() + ".");
+                ", su principal habilidad es que " + v1.getHabilidad_ppal() + ".");
         System.out.println("Índice de Maldad > "+ v1.getIndice_maldad());
         System.out.println();
               
         System.out.println(v2.getNombre() + " es de " + v2.getPais_origen() + 
-                ", su principal habilidad es que " + v2.getHabilidad_ppal() + ".");
+                ", su principal habilidad es la " + v2.getHabilidad_ppal() + ".");
         System.out.println("Índice de Maldad > "+ v2.getIndice_maldad());
         System.out.println();               
         
