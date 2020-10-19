@@ -29,7 +29,6 @@ public class Principal {
         h1.setHabilidad_ppal("Super Puñetazo");
         h1.setIndice_bondad(10);
         Heroes h2=new Heroes("Halcón del desierto","Nueva Zelanda", "Ojos láser", 8);
-        h2.setIndice_bondad(8);
         
         System.out.println("HEROES:");
         System.out.println(h1.getNombre() + " es de " + h1.getPais_origen() + 
@@ -46,8 +45,7 @@ public class Principal {
         v1.setPais_origen("Italia");
         v1.setHabilidad_ppal("vuela muy alto");
         v1.setIndice_maldad(10);
-        Villanos v2=new Villanos("Destructor", "Nueva York", "Fuerza extrema",8);
-        v2.setIndice_maldad(9);
+        Villanos v2=new Villanos("Destructor", "Nueva York", "Fuerza extrema",9);
         
         System.out.println();      
         System.out.println("VILLANOS:");
