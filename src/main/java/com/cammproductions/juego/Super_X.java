@@ -19,7 +19,7 @@ public class Super_X {
     public Super_X() {
     }
 
-    public Super_X(int energia, String nombre, String pais_origen, String habilidad_ppal) {
+    public Super_X(String nombre, String pais_origen, String habilidad_ppal) {
         this.energia = 100;
         this.nombre = nombre;
         this.pais_origen = pais_origen;
