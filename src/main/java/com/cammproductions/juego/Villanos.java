@@ -16,8 +16,8 @@ public class Villanos extends Super_X {
     public Villanos() {
     }
 
-    public Villanos(int indice_maldad, int energia, String nombre, String pais_origen, String habilidad_ppal) {
-        super(energia, nombre, pais_origen, habilidad_ppal);
+    public Villanos(String nombre, String pais_origen, String habilidad_ppal, int indice_maldad) {
+        super(nombre, pais_origen, habilidad_ppal);
         this.indice_maldad = indice_maldad;
     }
 

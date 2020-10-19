@@ -16,8 +16,8 @@ public class Heroes extends Super_X {
     public Heroes() {
     }
 
-    public Heroes(int indice_bondad, int energia, String nombre, String pais_origen, String habilidad_ppal) {
-        super(energia, nombre, pais_origen, habilidad_ppal);
+    public Heroes(String nombre, String pais_origen, String habilidad_ppal, int indice_bondad) {
+        super(nombre, pais_origen, habilidad_ppal);
         this.indice_bondad = indice_bondad;
     }
 
