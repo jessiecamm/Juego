@@ -59,7 +59,9 @@ public class Principal {
         System.out.println(v2.getNombre() + " es de " + v2.getPais_origen() + 
                 ", su principal habilidad es la " + v2.getHabilidad_ppal() + ".");
         System.out.println("Índice de Maldad > "+ v2.getIndice_maldad());
-        System.out.println();               
+        System.out.println();
         
+        System.out.println("Saraza!");       
+              
     }   
 }
