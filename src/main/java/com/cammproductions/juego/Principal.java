@@ -61,7 +61,7 @@ public class Principal {
         System.out.println("Índice de Maldad > "+ v2.getIndice_maldad());
         System.out.println();  
         
-        System.out.println("tu vieja");
+        System.out.println("tu vieja en tanga");
         
     }   
 }
