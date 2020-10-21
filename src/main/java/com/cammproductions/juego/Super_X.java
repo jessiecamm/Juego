@@ -65,13 +65,8 @@ public class Super_X {
     }   
     
     public int debilitar(){
-       int debilitar = 0;
-       int acumulador = 0;
-       while (energia!=0){
-            acumulador = acumulador + debilitar; 
-            energia = energia - acumulador;
-       }
-        return acumulador; 
+       int debilitar = 0;  
+       return debilitar; 
     }
     
 }

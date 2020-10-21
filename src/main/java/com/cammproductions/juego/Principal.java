@@ -59,52 +59,34 @@ public class Principal {
         System.out.println("Índice de Maldad > "+ v2.getIndice_maldad());
         System.out.println();   
         
-        System.out.println("Enfrentamiento: " + h1.getNombre() + "vs. " + v1.getNombre() + "Fight!");
+        System.out.println("Enfrentamiento: " + h1.getNombre() + " vs. " + v1.getNombre() + " = Fight!");
         int num1 = 2;
         int num2 = 5;    
-        while (h1.getEnergia() != 0 && v1.getEnergia() != 0){
-            int acumulador = 0;
-            acumulador = acumulador + h1.debilitar();
-            int energia = h1.getEnergia() - acumulador;
-            
-            System.out.println(h1.debilitar()-v1.atacarVillano_1());
-                   
-        /*for (int i=0; i<4; i++){
+        while (h1.getEnergia() > 90 && v1.getEnergia() > 90){
+            int debilitar = 0;
+            debilitar = debilitar - h1.debilitar();
+            int energia = h1.getEnergia() - debilitar;
+              
+        for (int i=0; i<4; i++){
             int numAleatorio = (int)Math.floor(Math.random()*(num1-(num2+1))+(num2));
             System.out.println(numAleatorio);
             switch (numAleatorio){
-                case 1:
-                    h1.debilitar(v1.atacarVillano_1());
-                    break;
-                case 2:
-                    h1.debilitar(v1.atacarVillano_2());
-                    break;
-                case 3:
-                    h1.debilitar(v1.atacarVillano_3());
-                    break;
-                case 4:
-                    h1.debilitar(v1.atacarVillano_4());
-                    break;
-                default: 
-                    break;
+                case 1 -> h1.debilitar(v1.atacarVillano_1());
+                case 2 -> h1.debilitar(v1.atacarVillano_2());
+                case 3 -> h1.debilitar(v1.atacarVillano_3());
+                case 4 -> h1.debilitar(v1.atacarVillano_4());
+                default -> {
+                    }
             }
             switch (numAleatorio){
-                case 1:
-                    v1.debilitar(h1.atacarHeroe_1());
-                    break;
-                case 2:
-                    v1.debilitar(h1.atacarHeroe_2());
-                    break;
-                case 3:
-                    v1.debilitar(h1.atacarHeroe_3());
-                    break;
-                case 4:
-                    v1.debilitar(h1.atacarHeroe_4());
-                    break;
-                default:
-                    break;
+                case 1 -> v1.debilitar(h1.atacarHeroe_1());
+                case 2 -> v1.debilitar(h1.atacarHeroe_2());
+                case 3 -> v1.debilitar(h1.atacarHeroe_3());
+                case 4 -> v1.debilitar(h1.atacarHeroe_4());
+                default -> {
+                    }
             }
-        //} */
+        } 
         }
     }
 }
