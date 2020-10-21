@@ -24,10 +24,10 @@ public class Principal {
         System.out.println();
         
         Heroes h1=new Heroes();
-        h1.setPais_origen("Australia");
-        h1.setNombre("Puño de Hierro");
-        h1.setHabilidad_ppal("Super Puñetazo");
-        h1.setIndice_bondad(10);
+        h1.setPais_origen("Inglaterra");
+        h1.setNombre("Rober-Tone");
+        h1.setHabilidad_ppal("Decibeles Mortales");
+        h1.setIndice_bondad(9);
         Heroes h2=new Heroes("Halcón del desierto","Nueva Zelanda", "Ojos láser", 8);
         
         System.out.println("HEROES:");
@@ -57,6 +57,10 @@ public class Principal {
         System.out.println(v2.getNombre() + " es de " + v2.getPais_origen() + 
                 ", su principal habilidad es la " + v2.getHabilidad_ppal() + ".");
         System.out.println("Índice de Maldad > "+ v2.getIndice_maldad());
-        System.out.println();        
+        System.out.println();   
+        
+        
+        
+   
     }   
 }
