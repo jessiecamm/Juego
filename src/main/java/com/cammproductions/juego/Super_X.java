@@ -26,7 +26,15 @@ public class Super_X {
         this.habilidad_ppal = habilidad_ppal;
     }
 
-     public String getNombre() {
+      public int getEnergia() {
+        return energia=100;
+    }
+
+    public void setEnergia(int energia) {
+        this.energia = energia;
+    }
+    
+    public String getNombre() {
         return nombre;
     }
 
@@ -55,5 +63,15 @@ public class Super_X {
         return "Super X >>> " + nombre + " - Pais de origen: " + pais_origen + 
                 " - Habilidad principal: " + habilidad_ppal + '.';
     }   
+    
+    public int debilitar(){
+       int debilitar = 0;
+       int acumulador = 0;
+       while (energia!=0){
+            acumulador = acumulador + debilitar; 
+            energia = energia - acumulador;
+       }
+        return acumulador; 
+    }
     
 }

@@ -29,5 +29,28 @@ public class Heroes extends Super_X {
         this.indice_bondad = indice_bondad;
     }
     
+    
+    public int atacarHeroe_1(){
+       int golpe_PatadaDientes=10;
+       int debilitar=this.getEnergia()-golpe_PatadaDientes;
+       return debilitar;
+    }
+    
+    public int atacarHeroe_2(){
+       int golpe_DecibelesMortales=20;
+       int debilitar=this.getEnergia()-golpe_DecibelesMortales;
+       return debilitar;       
+    }
+        
+    public int atacarHeroe_3(){
+       int golpe_GuitarraDistorsionada=5; 
+       int debilitar=this.getEnergia()-golpe_GuitarraDistorsionada;
+       return debilitar;          
+    }
      
+    public int atacarHeroe_4(){
+       int golpe_AcopleSangraOidos=15; 
+       int debilitar=this.getEnergia()-golpe_AcopleSangraOidos;
+       return debilitar;    
+    }           
 }
