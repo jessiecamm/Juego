@@ -53,4 +53,10 @@ public class Heroes extends Super_X {
        int debilitar=this.getEnergia()-golpe_AcopleSangraOidos;
        return debilitar;    
     }           
+
+    void debilitar(int atacarVillano_4) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
