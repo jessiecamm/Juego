@@ -63,8 +63,13 @@ public class Principal {
         int num1 = 2;
         int num2 = 5;    
         while (h1.getEnergia() != 0 && v1.getEnergia() != 0){
+            int acumulador = 0;
+            acumulador = acumulador + h1.debilitar();
+            int energia = h1.getEnergia() - acumulador;
             
-        //for (int i=0; i<4; i++){
+            System.out.println(h1.debilitar()-v1.atacarVillano_1());
+                   
+        /*for (int i=0; i<4; i++){
             int numAleatorio = (int)Math.floor(Math.random()*(num1-(num2+1))+(num2));
             System.out.println(numAleatorio);
             switch (numAleatorio){
@@ -99,7 +104,7 @@ public class Principal {
                 default:
                     break;
             }
-        //} 
+        //} */
         }
     }
 }
