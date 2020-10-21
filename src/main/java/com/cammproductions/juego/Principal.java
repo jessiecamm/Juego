@@ -64,7 +64,8 @@ public class Principal {
         System.out.println("Números generados entre 1 y 4, incluyendo el 1 y el 4");
         for (int i=0; i<4; i++){
             int numAleatorio = (int)Math.floor(Math.random()*(num1-(num2+1))+(num2));
-            System.out.println(i +" "+ numAleatorio);   
+            System.out.println(i +" "+ numAleatorio);
+            System.out.println("hola!");
         }
     }
 }
