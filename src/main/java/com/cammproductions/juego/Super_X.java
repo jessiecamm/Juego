@@ -64,14 +64,10 @@ public class Super_X {
                 " - Habilidad principal: " + habilidad_ppal + '.';
     }   
     
-    public int debilitar(){
-       int debilitar = 0;
-       int acumulador = 0;
-       while (energia!=0){
-            acumulador = acumulador + debilitar; 
-            energia = energia - acumulador;
-       }
-        return acumulador; 
+    public int debilitar(int ataque){       
+       //int acumulador = 0;
+       this.energia = this.energia - ataque;       
+       return energia;
     }
     
 }
