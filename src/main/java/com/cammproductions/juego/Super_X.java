@@ -70,3 +70,5 @@ public class Super_X {
        this.energia = this.energia - ataque;       
        return energia;
     }
+    
+}
