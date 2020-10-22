@@ -59,6 +59,7 @@ public class Principal {
         System.out.println("Índice de Maldad > "+ v2.getIndice_maldad());
         System.out.println();   
         
+
         System.out.println("Enfrentamiento: " + h1.getNombre() + " vs. " + v1.getNombre() + " - Fight!");
         /*
         
@@ -81,10 +82,22 @@ public class Principal {
         */
         int num1 = 2;
         int num2 = 5;           
+
+        System.out.println("Enfrentamiento: " + h1.getNombre() + " vs. " + v1.getNombre() + " = Fight!");
+        int num1 = 2;
+        int num2 = 5;    
+        while (h1.getEnergia() > 90 && v1.getEnergia() > 90){
+            int debilitar = 0;
+            debilitar = debilitar - h1.debilitar();
+            int energia = h1.getEnergia() - debilitar;
+              
+ 
+ 
         for (int i=0; i<4; i++){
             int numAleatorio = (int)Math.floor(Math.random()*(num1-(num2+1))+(num2));
             System.out.println(numAleatorio);
             switch (numAleatorio){
+
                 case 1:
                     int golpe = energiaInicial - (h1.debilitar(v1.atacarVillano_1()));
                     System.out.println("Energia: "+ golpe);
