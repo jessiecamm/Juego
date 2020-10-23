@@ -29,8 +29,7 @@ public class Villanos extends Super_X {
         this.indice_maldad = indice_maldad;
     }
     
-    //Métodos de ataque de Villanos
-    
+    //Métodos de ataque de Villanos    
     public int atacarVillano_1() {        
         int golpe1;
         golpe1 = this.energia -28;

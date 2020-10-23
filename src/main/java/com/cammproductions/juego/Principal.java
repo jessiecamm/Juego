@@ -63,6 +63,7 @@ public class Principal {
         System.out.println();
         
         System.out.println("Enfrentamiento: " + h1.getNombre() + " vs. " + v1.getNombre() + " - Fight!");
+        System.out.println();
         
         System.out.println("Energia Heroe: "+h1.energia);
         int minimo = 1;

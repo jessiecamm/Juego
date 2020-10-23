@@ -29,8 +29,7 @@ public class Heroes extends Super_X {
         this.indice_bondad = indice_bondad;
     }
     
-    //Métodos de ataque de Heroes
-    
+    //Métodos de ataque de Heroes    
     public int atacarHeroe_1() {        
         int golpe1;
         golpe1 = this.energia - 30;
