@@ -80,6 +80,6 @@ public class Super_X {
     //Método debilitar
     public int debilitar(int golpe) {
         this.energia = this.energia - golpe;
-        return golpe;        
+        return this.energia;        
     }    
 }
