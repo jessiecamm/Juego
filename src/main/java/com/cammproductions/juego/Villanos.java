@@ -30,27 +30,38 @@ public class Villanos extends Super_X {
     }
     
     //Métodos de ataque de Villanos    
-    public int atacarVillano_1() {        
+    public int atacarVillano_1() {   
+        System.out.println(super.getNombre()+ " lo ataca con sus LAZOS DE SPAGUETTI"
+                + ", le roba 28 puntos de energia a su oponente.");
         int golpe1;
-        golpe1 = this.energia -28;
+        golpe1 = 28;
         return golpe1;
     }
     
     public int atacarVillano_2() {        
+        System.out.println(super.getNombre()+ " lo ataca con su PIZZA BOOMERANG"
+                + ", le roba 12 puntos de energia a su oponente.");
         int golpe2;
-        golpe2 = this.energia -12;
+        golpe2 = 12;
         return golpe2;
     }
     
     public int atacarVillano_3() {        
+        System.out.println(super.getNombre()+ " lo ataca VOLANDO MUY ALTO"
+                + ", le roba 11 puntos de energia a su oponente.");
         int golpe3;
-        golpe3 = this.energia -11;
+        golpe3 = 11;
+        if (this.indice_maldad>8) {
+            golpe3=golpe3+1;
+        }
         return golpe3;
     }
     
     public int atacarVillano_4() {        
+        System.out.println(super.getNombre()+ " lo ataca con sus BALA-TUNAS"
+                + ", le roba 35 puntos de energia a su oponente.");
         int golpe4;
-        golpe4 = this.energia -35;
+        golpe4 = 35;
         return golpe4;
     }   
     

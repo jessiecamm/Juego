@@ -11,7 +11,7 @@ package com.cammproductions.juego;
  */
 public class Super_X {
     
-    public int energia;
+    private int energia;
     private String nombre;
     private String pais_origen;
     private String habilidad_ppal;
@@ -60,8 +60,8 @@ public class Super_X {
 
     @Override
     public String toString() {
-        return "Super X >>> " + nombre + " - Pais de origen: " + pais_origen + 
-                " - Habilidad principal: " + habilidad_ppal + '.';
+        return ">>>> " + nombre + " es de " + pais_origen + 
+                ", su principal habilidad es " + habilidad_ppal + '.';
     }
 
     //Método para generar número aleatorio
@@ -79,7 +79,8 @@ public class Super_X {
 
     //Método debilitar
     public int debilitar(int golpe) {
-        this.energia = this.energia - golpe;
+        this.energia-= golpe;
         return this.energia;        
     }    
+    
 }
