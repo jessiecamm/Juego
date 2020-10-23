@@ -75,7 +75,8 @@ public class Super_X {
         int num =(int)Math.floor(Math.random()*(maximo-minimo+1)+(minimo));
         return num;
     }
-    
+   
+
     //Método debilitar
     public int debilitar(int golpe) {
         this.energia = this.energia - golpe;

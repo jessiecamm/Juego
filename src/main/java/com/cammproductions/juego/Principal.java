@@ -24,6 +24,7 @@ public class Principal {
         System.out.println();
         
         Heroes h1=new Heroes();
+
         h1.setEnergia(100);
         h1.setPais_origen("Inglaterra");
         h1.setNombre("Rober-Tone");
@@ -47,9 +48,10 @@ public class Principal {
         v1.setPais_origen("Italia");
         v1.setHabilidad_ppal("vuela muy alto");
         v1.setIndice_maldad(10);
+
         Villanos v2=new Villanos("Destructor", "Nueva York", "Fuerza extrema",100, 9);
         
-        
+ 
         System.out.println();      
         System.out.println("VILLANOS:");
         System.out.println(v1.getNombre() + " es de " + v1.getPais_origen() + 
