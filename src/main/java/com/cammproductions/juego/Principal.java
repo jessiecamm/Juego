@@ -130,7 +130,7 @@ public class Principal {
                     + h1.getNombre() + " ha muerto." + " May the forth be with him.");
             } else {
                 System.out.println("Ambos son PERDEDORES, han muerto!!!!"
-                        + "Ahora pelean para el más allá. Bienvenidos al mundo ZOMBIE.");
+                        + " Ahora pelean para el más allá. Bienvenidos al mundo ZOMBIE.");
             }
             
       } 
