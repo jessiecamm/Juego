@@ -24,12 +24,14 @@ public class Principal {
         System.out.println();
         
         Heroes h1=new Heroes();
+
+        h1.setEnergia(100);
         h1.setPais_origen("Inglaterra");
         h1.setNombre("Rober-Tone");
         h1.setHabilidad_ppal("Decibeles Mortales");
         h1.setIndice_bondad(9);
-        Heroes h2=new Heroes("Halcón del desierto","Nueva Zelanda", "Ojos láser", 8);
-        
+        Heroes h2=new Heroes("Halcón del desierto","Nueva Zelanda", "Ojos láser", 100, 8);        
+                
         System.out.println("HEROES:");
         System.out.println(h1.getNombre() + " es de " + h1.getPais_origen() + 
                 ", su principal habilidad es " + h1.getHabilidad_ppal() + ".");
@@ -41,12 +43,15 @@ public class Principal {
         System.out.println();
         
         Villanos v1=new Villanos();
+        v1.setEnergia(100);
         v1.setNombre("Cruela");
         v1.setPais_origen("Italia");
         v1.setHabilidad_ppal("vuela muy alto");
         v1.setIndice_maldad(10);
-        Villanos v2=new Villanos("Destructor", "Nueva York", "Fuerza extrema",9);
+
+        Villanos v2=new Villanos("Destructor", "Nueva York", "Fuerza extrema",100, 9);
         
+ 
         System.out.println();      
         System.out.println("VILLANOS:");
         System.out.println(v1.getNombre() + " es de " + v1.getPais_origen() + 
@@ -57,86 +62,42 @@ public class Principal {
         System.out.println(v2.getNombre() + " es de " + v2.getPais_origen() + 
                 ", su principal habilidad es la " + v2.getHabilidad_ppal() + ".");
         System.out.println("Índice de Maldad > "+ v2.getIndice_maldad());
-        System.out.println();   
+        System.out.println();
         
-
         System.out.println("Enfrentamiento: " + h1.getNombre() + " vs. " + v1.getNombre() + " - Fight!");
-        /*
+        System.out.println();
         
-        while (h1.getEnergia() != 0 && v1.getEnergia() != 0){*/
+        System.out.println("Energia Heroe: "+h1.energia);
+        int minimo = 1;
+        int maximo = 4;
+        int golpeHeroe = Super_X.generarNumeroAleatorio(minimo, maximo);
+        System.out.println("Nro Generado: "+golpeHeroe);
+        int golpe;
         
-        //int acumulador = 0;
-        //acumulador = acumulador + h1.debilitar();        
-        //int energia = h1.getEnergia() - acumulador;                
-        //System.out.println(h1.debilitar()-v1.atacarVillano_1());
+        switch(golpeHeroe) {
+            case 1:
+                golpe = h1.debilitar(v1.atacarVillano_1());                             
+                System.out.println("Energia Golpe: "+h1.getEnergia());
+                System.out.println("Energia Restante >>> "+golpe);
+                break;
+            case 2:
+                golpe = h1.debilitar(v1.atacarVillano_2());                
+                System.out.println("Energia Golpe: "+h1.getEnergia());
+                System.out.println("Energia Restante >>> "+golpe);
+                break;
+            case 3:
+                golpe = h1.debilitar(v1.atacarVillano_3());
+                System.out.println("Energia Golpe: "+h1.getEnergia());
+                System.out.println("Energia Restante >>> "+golpe);
+                break;
+            case 4:
+                golpe = h1.debilitar(v1.atacarVillano_4());                
+                System.out.println("Energia Golpe: "+h1.getEnergia());
+                System.out.println("Energia Restante >>> "+golpe);
+                break;
+            default:
+                break;                
+        }        
         
-        int energiaInicial = h1.getEnergia();
-        int acumulador = 0;
-        int energiaRestante = energiaInicial - acumulador;
-        /*System.out.println("Energia Heroe: "+ energiaInicial);
-        
-        acumulador = energiaInicial - (h1.debilitar(v1.atacarVillano_1()));
-        System.out.println("Energia Ronda 1: "+ acumulador);
-        acumulador = h1.debilitar(v1.atacarVillano_2());
-        System.out.println("Energia Ronda 2: "+ acumulador);
-        */
-        int num1 = 2;
-        int num2 = 5;           
-
-        System.out.println("Enfrentamiento: " + h1.getNombre() + " vs. " + v1.getNombre() + " = Fight!");
-        int num1 = 2;
-        int num2 = 5;    
-        while (h1.getEnergia() > 90 && v1.getEnergia() > 90){
-            int debilitar = 0;
-            debilitar = debilitar - h1.debilitar();
-            int energia = h1.getEnergia() - debilitar;
-              
- 
- 
-        for (int i=0; i<4; i++){
-            int numAleatorio = (int)Math.floor(Math.random()*(num1-(num2+1))+(num2));
-            System.out.println(numAleatorio);
-            switch (numAleatorio){
-
-                case 1:
-                    int golpe = energiaInicial - (h1.debilitar(v1.atacarVillano_1()));
-                    System.out.println("Energia: "+ golpe);
-                    acumulador = acumulador + golpe;
-                    System.out.println("acumula: "+acumulador);
-                    System.out.println("Resta: "+energiaRestante);                    
-                    break;
-                case 2:
-                    h1.debilitar(v1.atacarVillano_2());
-                    System.out.println("Energia: "+ h1.getEnergia());
-                    break;
-                case 3:
-                    h1.debilitar(v1.atacarVillano_3());
-                    System.out.println("Energia: "+ h1.getEnergia());
-                    break;
-                case 4:
-                    h1.debilitar(v1.atacarVillano_4());
-                    System.out.println("Energia: "+ h1.getEnergia());
-                    break;
-                default: 
-                    break;
-            }
-            switch (numAleatorio){
-                case 1:
-                    v1.debilitar(h1.atacarHeroe_1());
-                    break;
-                case 2:
-                    v1.debilitar(h1.atacarHeroe_2());
-                    break;
-                case 3:
-                    v1.debilitar(h1.atacarHeroe_3());
-                    break;
-                case 4:
-                    v1.debilitar(h1.atacarHeroe_4());
-                    break;
-                default:
-                    break;
-            }      
-        }
-    }
- }
+    }   
 }

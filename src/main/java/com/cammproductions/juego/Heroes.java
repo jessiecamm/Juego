@@ -16,8 +16,8 @@ public class Heroes extends Super_X {
     public Heroes() {
     }
 
-    public Heroes(String nombre, String pais_origen, String habilidad_ppal, int indice_bondad) {
-        super(nombre, pais_origen, habilidad_ppal);
+    public Heroes(String nombre, String pais_origen, String habilidad_ppal, int energia, int indice_bondad) {
+        super(nombre, pais_origen, habilidad_ppal, energia);
         this.indice_bondad = indice_bondad;
     }
 
@@ -29,33 +29,29 @@ public class Heroes extends Super_X {
         this.indice_bondad = indice_bondad;
     }
     
-    
-    public int atacarHeroe_1(){
-       int golpe_PatadaDientes=10;
-       int debilitar=this.getEnergia()-golpe_PatadaDientes;
-       return debilitar;
+    //Métodos de ataque de Heroes    
+    public int atacarHeroe_1() {        
+        int golpe1;
+        golpe1 = this.energia - 30;
+        return golpe1;
     }
     
-    public int atacarHeroe_2(){
-       int golpe_DecibelesMortales=20;
-       int debilitar=this.getEnergia()-golpe_DecibelesMortales;
-       return debilitar;       
+    public int atacarHeroe_2() {        
+        int golpe2;
+        golpe2 = this.energia - 10;
+        return golpe2;
     }
-        
-    public int atacarHeroe_3(){
-       int golpe_GuitarraDistorsionada=5; 
-       int debilitar=this.getEnergia()-golpe_GuitarraDistorsionada;
-       return debilitar;          
+    
+    public int atacarHeroe_3() {        
+        int golpe3;
+        golpe3 = this.energia - 15;
+        return golpe3;
+    }
+    
+    public int atacarHeroe_4() {        
+        int golpe4;
+        golpe4 = this.energia - 5;
+        return golpe4;
     }
      
-    public int atacarHeroe_4(){
-       int golpe_AcopleSangraOidos=15; 
-       int debilitar=this.getEnergia()-golpe_AcopleSangraOidos;
-       return debilitar;    
-    }           
-
-    void debilitar(int atacarVillano_4) {
-        
-    }
-
 }

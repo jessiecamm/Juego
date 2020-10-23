@@ -16,8 +16,8 @@ public class Villanos extends Super_X {
     public Villanos() {
     }
 
-    public Villanos(String nombre, String pais_origen, String habilidad_ppal, int indice_maldad) {
-        super(nombre, pais_origen, habilidad_ppal);
+    public Villanos(String nombre, String pais_origen, String habilidad_ppal, int energia, int indice_maldad) {
+        super(nombre, pais_origen, habilidad_ppal, energia);
         this.indice_maldad = indice_maldad;
     }
 
@@ -29,32 +29,29 @@ public class Villanos extends Super_X {
         this.indice_maldad = indice_maldad;
     }
     
-    public int atacarVillano_1(){
-       int golpe_LazoSpaguetti=28;
-       int debilitar=this.getEnergia()-golpe_LazoSpaguetti;
-       return debilitar;
+    //Métodos de ataque de Villanos    
+    public int atacarVillano_1() {        
+        int golpe1;
+        golpe1 = this.energia -28;
+        return golpe1;
     }
     
-    public int atacarVillano_2(){
-       int golpe_PizzaBoomerang=12;
-       int debilitar=this.getEnergia()-golpe_PizzaBoomerang;
-       return debilitar;       
+    public int atacarVillano_2() {        
+        int golpe2;
+        golpe2 = this.energia -12;
+        return golpe2;
     }
-        
-    public int atacarVillano_3(){
-       int golpe_VuelaAlto=11; 
-       int debilitar=this.getEnergia()-golpe_VuelaAlto;
-       return debilitar;          
+    
+    public int atacarVillano_3() {        
+        int golpe3;
+        golpe3 = this.energia -11;
+        return golpe3;
     }
-     
-    public int atacarVillano_4(){
-       int golpe_BalaTunas=35; 
-       int debilitar=this.getEnergia()-golpe_BalaTunas;
-       return debilitar; 
-    }
-
-    void debilitar(int atacarHeroe_1) {
-       
-    }
+    
+    public int atacarVillano_4() {        
+        int golpe4;
+        golpe4 = this.energia -35;
+        return golpe4;
+    }   
     
 }

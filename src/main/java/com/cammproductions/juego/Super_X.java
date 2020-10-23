@@ -11,7 +11,7 @@ package com.cammproductions.juego;
  */
 public class Super_X {
     
-    private int energia;
+    public int energia;
     private String nombre;
     private String pais_origen;
     private String habilidad_ppal;
@@ -19,22 +19,22 @@ public class Super_X {
     public Super_X() {
     }
 
-    public Super_X(String nombre, String pais_origen, String habilidad_ppal) {
-        this.energia = 100;
+    public Super_X(String nombre, String pais_origen, String habilidad_ppal, int energia) {
+        this.energia = energia;
         this.nombre = nombre;
         this.pais_origen = pais_origen;
         this.habilidad_ppal = habilidad_ppal;
     }
 
-      public int getEnergia() {
-        return energia=100;
+    public int getEnergia() {
+        return energia;
     }
 
     public void setEnergia(int energia) {
         this.energia = energia;
-    }
-    
-    public String getNombre() {
+    }    
+
+     public String getNombre() {
         return nombre;
     }
 
@@ -62,13 +62,24 @@ public class Super_X {
     public String toString() {
         return "Super X >>> " + nombre + " - Pais de origen: " + pais_origen + 
                 " - Habilidad principal: " + habilidad_ppal + '.';
-    }   
-    
-
-    public int debilitar(int ataque){       
-       //int acumulador = 0;
-       this.energia = this.energia - ataque;       
-       return energia;
     }
-    
+
+    //Método para generar número aleatorio
+    /**
+     *
+     * @param minimo
+     * @param maximo
+     * @return
+     */    
+    public static int generarNumeroAleatorio(int minimo,int maximo) {        
+        int num =(int)Math.floor(Math.random()*(maximo-minimo+1)+(minimo));
+        return num;
+    }
+   
+
+    //Método debilitar
+    public int debilitar(int golpe) {
+        this.energia = this.energia - golpe;
+        return golpe;        
+    }    
 }
