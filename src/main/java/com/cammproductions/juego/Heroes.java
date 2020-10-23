@@ -36,9 +36,9 @@ public class Heroes extends Super_X {
         int golpe1;
         golpe1= 30;
         if (this.indice_bondad>8) {
-            golpe1=golpe1+1;
+            golpe1=golpe1++;
         }
-        return golpe1;
+        return golpe1++;
     }
     
     public int atacarHeroe_2() {        
