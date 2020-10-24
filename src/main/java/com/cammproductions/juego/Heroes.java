@@ -32,36 +32,40 @@ public class Heroes extends Super_X {
     //Métodos de ataque de Heroes    
     public int atacarHeroe_1() {        
         System.out.println(super.getNombre()+ " lo ataca con sus DECIBELES MORTALES"
-                + ", le roba 30 puntos de energia a su oponente.");
+            + ", le roba 30 puntos de energia a su oponente.");
         int golpe1;
         golpe1= 30;
         if (this.indice_bondad>8) {
             golpe1=golpe1++;
         }
-        return golpe1++;
+        return golpe1++;           
     }
     
-    public int atacarHeroe_2() {        
+    
+    public int atacarHeroe_2() {    
         System.out.println(super.getNombre()+ " lo ataca con su GUITARRA ULTRA DISTORSIONADA"
-                + ", le roba 10 puntos de energia a su oponente.");
+            + ", le roba 10 puntos de energia a su oponente.");
         int golpe2;
         golpe2 = 10;
-        return golpe2;
+        return golpe2;            
     }
     
-    public int atacarHeroe_3() {        
+    
+    public int atacarHeroe_3() {    
         System.out.println(super.getNombre()+ " lo ataca con una PATADA EN LOS DIENTES"
-                + ", le roba 15 puntos de energia a su oponente.");
+            + ", le roba 15 puntos de energia a su oponente.");
         int golpe3;
         golpe3 = 15;
         return golpe3;
     }
     
-    public int atacarHeroe_4() {        
+    
+    public int atacarHeroe_4() {    
         System.out.println(super.getNombre()+ " lo ataca con su ACOPLE SANGRA OIDOS"
-                + ", le roba 5 puntos de energia a su oponente.");
+            + ", le roba 5 puntos de energia a su oponente.");
         int golpe4;
         golpe4 = 5;
         return golpe4;
-    }   
+    }
+       
 }
