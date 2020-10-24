@@ -5,6 +5,8 @@
  */
 package com.cammproductions.juego;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Jessie
@@ -60,79 +62,107 @@ public class Principal {
         System.out.println("Índice de Maldad > "+ v2.getIndice_maldad());
         System.out.println();
         
-        System.out.println("QUÉ COMIENCE EL JUEGO!");
-        System.out.println("Hoy se enfrentan: " + h1.getNombre() + " vs. " + v1.getNombre());
+        System.out.println("QUÉ COMIENCE EL JUEGO!");     
+        System.out.print("Hoy se enfrentan: ");
+        int minimo = 1;
+        int maximo = 2;        
+        
+        int luchador1 = Heroes.generarNumeroAleatorio(minimo, maximo);
+        switch(luchador1) {
+            case 1:
+                System.out.print(h1.getNombre()+ " vs. ");                              
+                break;
+            case 2:
+                System.out.print(h2.getNombre()+ " vs. ");                
+                break;
+            default:
+                break;            
+        }
+        
+        int luchador2 = Villanos.generarNumeroAleatorio(minimo, maximo);
+        switch(luchador2)  {
+            case 1:
+                System.out.print(v1.getNombre()+ " vs. ");
+                break;
+            case 2:
+                System.out.print(v2.getNombre()+ " vs. ");
+                break;
+            default:
+                break;
+        }        
+                
+        System.out.println();                        
         System.out.println("LET'S FIGHT!");
         System.out.println();
         
         System.out.println(h1.getNombre() + " comienza el encuentro con una energía del "+h1.getEnergia() +  ("%."));
         System.out.println(v1.getNombre() + " comienza el encuentro con una energía del "+v1.getEnergia() +  ("%."));
         System.out.println();
-        while (h1.getEnergia()>0 && v1.getEnergia()>0) {
-        int minimo = 1;
-        int maximo = 4;
-        int golpeHeroes = Super_X.generarNumeroAleatorio(minimo, maximo);
-        int golpe;
-        golpe=0;
-        int energia_actual_Heroes=h1.debilitar(golpe);
         
-        switch(golpeHeroes) {
-            case 1:
-                golpe = h1.debilitar(v1.atacarVillano_1());                             
-                System.out.println("A " + h1.getNombre() + " le queda " +golpe +  "% de energía.");
-                break;
-            case 2:
-                golpe = h1.debilitar(v1.atacarVillano_2());                
-                System.out.println("A " + h1.getNombre() + " le queda " +golpe +  "% de energía.");
-                break;
-            case 3:
-                golpe = h1.debilitar(v1.atacarVillano_3());
-                System.out.println("A " + h1.getNombre() + " le queda " +golpe +  "% de energía.");
-                break;
-            case 4:
-                golpe = h1.debilitar(v1.atacarVillano_4());                
-                System.out.println("A " + h1.getNombre() + " le queda " +golpe +  "% de energía.");
-                break;
-            default:
-                break;                
-        }
-       
-        int golpeVillanos = Super_X.generarNumeroAleatorio(minimo, maximo);
-        golpe=0;
-        int energia_actual_Villanos=v1.debilitar(golpe);
+        while ((h1.getEnergia() >= 0) && (v1.getEnergia() >= 0)) {
+            minimo = 1;
+            maximo = 4;
+            int golpeHeroes = Super_X.generarNumeroAleatorio(minimo, maximo);
+            int golpe;            
         
-        switch(golpeVillanos) {
-            case 1:
-                golpe = v1.debilitar(h1.atacarHeroe_1());                             
-                System.out.println("A " + v1.getNombre() + " le queda " +golpe +  "% de energía.");
-                break;
-            case 2:
-                golpe = v1.debilitar(h1.atacarHeroe_2());                
-                System.out.println("A " + v1.getNombre() + " le queda " +golpe +  "% de energía.");
-                break;
-            case 3:
-                golpe = v1.debilitar(h1.atacarHeroe_3());
-                System.out.println("A " + v1.getNombre() + " le queda " +golpe +  "% de energía.");
-                break;
-            case 4:
-                golpe = v1.debilitar(h1.atacarHeroe_4());                
-                System.out.println("A " + v1.getNombre() + " le queda " +golpe +  "% de energía.");
-                break;
-            default:
-                break;                
-        }
-        
-            if ((v1.getEnergia() < h1.getEnergia() && h1.getEnergia()>=0)){
-                System.out.println(h1.getNombre()+ " ha vencido a " + v1.getNombre() + "!! "
-                    + v1.getNombre() + " ha muerto." + " May the forth be with her.");
-            } else if ((v1.getEnergia() > h1.getEnergia() && v1.getEnergia() >=0)){
-                System.out.println(v1.getNombre()+ " ha vencido a " + h1.getNombre() + "!! "
-                    + h1.getNombre() + " ha muerto." + " May the forth be with him.");
-            } else {
-                System.out.println("Ambos son PERDEDORES, han muerto!!!!"
-                        + " Ahora pelean para el más allá. Bienvenidos al mundo ZOMBIE.");
+            switch(golpeHeroes) {
+                case 1:
+                    golpe = h1.debilitar(v1.atacarVillano_1());                             
+                    System.out.println("A " + h1.getNombre() + " le queda " +golpe +  "% de energía.");
+                    break;
+                case 2:
+                    golpe = h1.debilitar(v1.atacarVillano_2());                
+                    System.out.println("A " + h1.getNombre() + " le queda " +golpe +  "% de energía.");
+                    break;
+                case 3:
+                    golpe = h1.debilitar(v1.atacarVillano_3());
+                    System.out.println("A " + h1.getNombre() + " le queda " +golpe +  "% de energía.");
+                    break;
+                case 4:
+                    golpe = h1.debilitar(v1.atacarVillano_4());                
+                    System.out.println("A " + h1.getNombre() + " le queda " +golpe +  "% de energía.");
+                    break;
+                default:
+                    break;                
             }
-            
-      } 
+                               
+            int golpeVillanos = Super_X.generarNumeroAleatorio(minimo, maximo);
+                    
+            switch(golpeVillanos) {
+                case 1:
+                    golpe = v1.debilitar(h1.atacarHeroe_1());                             
+                    System.out.println("A " + v1.getNombre() + " le queda " +golpe +  "% de energía.");
+                    break;
+                case 2:
+                    golpe = v1.debilitar(h1.atacarHeroe_2());                
+                    System.out.println("A " + v1.getNombre() + " le queda " +golpe +  "% de energía.");
+                    break;
+                case 3:
+                    golpe = v1.debilitar(h1.atacarHeroe_3());
+                    System.out.println("A " + v1.getNombre() + " le queda " +golpe +  "% de energía.");
+                    break;
+                case 4:
+                    golpe = v1.debilitar(h1.atacarHeroe_4());                
+                    System.out.println("A " + v1.getNombre() + " le queda " +golpe +  "% de energía.");
+                    break;
+                default:
+                    break;                
+            }
+            int energia_actual_Villanos=v1.getEnergia();
+            int energia_actual_Heroes=h1.getEnergia();
+                       
+            if ((energia_actual_Villanos <= 0) && (energia_actual_Heroes > 0)) {
+                System.out.println(h1.getNombre()+ " ha vencido a " + v1.getNombre() + "!! "
+                    + v1.getNombre() + " ha muerto." + " May the forth be with her.");                
+            }
+            else if ((energia_actual_Heroes <= 0) && (energia_actual_Villanos > 0)) {
+                System.out.println(v1.getNombre()+ " ha vencido a " + h1.getNombre() + "!! "
+                    + h1.getNombre() + " ha muerto." + " May the forth be with him.");                
+            }
+            else if((energia_actual_Villanos <=0) && (energia_actual_Heroes <=0)) {
+                System.out.println("Ambos son PERDEDORES, han muerto!!!!"
+                    + " Ahora pelean para el más allá. Bienvenidos al mundo ZOMBIE.");
+            }
+        } 
     }   
 }

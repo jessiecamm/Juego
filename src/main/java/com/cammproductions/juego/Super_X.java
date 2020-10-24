@@ -81,6 +81,7 @@ public class Super_X {
     public int debilitar(int golpe) {
         this.energia-= golpe;
         return this.energia;        
-    }    
-    
+    }
+   
+   
 }

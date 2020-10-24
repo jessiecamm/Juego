@@ -52,7 +52,7 @@ public class Villanos extends Super_X {
         int golpe3;
         golpe3 = 11;
         if (this.indice_maldad>8) {
-            golpe3=golpe3+1;
+            golpe3=golpe3++;
         }
         return golpe3;
     }
