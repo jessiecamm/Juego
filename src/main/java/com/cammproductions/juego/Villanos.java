@@ -52,7 +52,8 @@ public class Villanos extends Super_X {
         int golpe3;
         golpe3 = 11;
         if (this.indice_maldad>8) {
-            golpe3=golpe3++;
+            golpe3++;
+            System.out.println("Por indice de maldad le roba 1 punto más!");
         }
         return golpe3;
     }
