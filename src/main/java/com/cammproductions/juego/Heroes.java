@@ -36,10 +36,10 @@ public class Heroes extends Super_X {
         int golpe1;
         golpe1= 30;
         if (this.indice_bondad>8) {
-            golpe1++;
+           golpe1++;
             System.out.println("Por indice de bondad le roba 1 punto más!");
         }
-        return golpe1;           
+        return golpe1;
     }
     
     

@@ -82,10 +82,10 @@ public class Principal {
         int luchador2 = Villanos.generarNumeroAleatorio(minimo, maximo);
         switch(luchador2)  {
             case 1:
-                System.out.print(v1.getNombre()+ " vs. ");
+                System.out.print(v1.getNombre());
                 break;
             case 2:
-                System.out.print(v2.getNombre()+ " vs. ");
+                System.out.print(v2.getNombre());
                 break;
             default:
                 break;
@@ -99,7 +99,7 @@ public class Principal {
         System.out.println(v1.getNombre() + " comienza el encuentro con una energía del "+v1.getEnergia() +  ("%."));
         System.out.println();
         
-        while ((h1.getEnergia() >= 0) && (v1.getEnergia() >= 0)) {
+        while ((h1.getEnergia() > 0) && (v1.getEnergia() > 0)) {
             minimo = 1;
             maximo = 4;
             int golpeHeroes = Super_X.generarNumeroAleatorio(minimo, maximo);
@@ -148,21 +148,22 @@ public class Principal {
                 default:
                     break;                
             }
-            int energia_actual_Villanos=v1.getEnergia();
-            int energia_actual_Heroes=h1.getEnergia();
-                       
-            if ((energia_actual_Villanos <= 0) && (energia_actual_Heroes > 0)) {
-                System.out.println(h1.getNombre()+ " ha vencido a " + v1.getNombre() + "!! "
-                    + v1.getNombre() + " ha muerto." + " May the forth be with her.");                
-            }
-            else if ((energia_actual_Heroes <= 0) && (energia_actual_Villanos > 0)) {
-                System.out.println(v1.getNombre()+ " ha vencido a " + h1.getNombre() + "!! "
-                    + h1.getNombre() + " ha muerto." + " May the forth be with him.");                
-            }
-            else if((energia_actual_Villanos <=0) && (energia_actual_Heroes <=0)) {
-                System.out.println("Ambos son PERDEDORES, han muerto!!!!"
-                    + " Ahora pelean para el más allá. Bienvenidos al mundo ZOMBIE.");
-            }
-        } 
-    }   
+            
+                int energia_actual_Villanos=v1.getEnergia();
+                int energia_actual_Heroes=h1.getEnergia();
+
+                if ((energia_actual_Villanos <= 0) && (energia_actual_Heroes > 0)) {
+                    System.out.println(h1.getNombre()+ " ha vencido a " + v1.getNombre() + "!! "
+                        + v1.getNombre() + " ha muerto." + " May the forth be with her.");                
+                }
+                else if ((energia_actual_Heroes <= 0) && (energia_actual_Villanos > 0)) {
+                    System.out.println(v1.getNombre()+ " ha vencido a " + h1.getNombre() + "!! "
+                        + h1.getNombre() + " ha muerto." + " May the forth be with him.");                
+                }
+                else if((energia_actual_Villanos <=0) && (energia_actual_Heroes <=0)) {
+                    System.out.println("Ambos son PERDEDORES, han muerto!!!!"
+                        + " Ahora pelean para el más allá. Bienvenidos al mundo ZOMBIE.");
+                }           
+    }
+  }
 }
