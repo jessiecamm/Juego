@@ -38,11 +38,11 @@ public class Heroes extends Super_X {
             golpe1= 30;
             if (this.indice_bondad>8) {
                 golpe1+=5;
-                System.out.println("Por indice de bondad le roba 5 puntos más!");
+                System.out.println("BONUS: Por indice de bondad, le roba 5 puntos más!");
             }               
             return golpe1;
         }
-        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;        
     }
     
@@ -55,7 +55,7 @@ public class Heroes extends Super_X {
             golpe2 = 10;        
             return golpe2;
         }
-        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;
     }
     
@@ -68,7 +68,7 @@ public class Heroes extends Super_X {
             golpe3 = 15;        
             return golpe3;
         }
-        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;
     }
     
@@ -81,7 +81,7 @@ public class Heroes extends Super_X {
             golpe4 = 5;        
             return golpe4;
         }
-        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;
         
     }
