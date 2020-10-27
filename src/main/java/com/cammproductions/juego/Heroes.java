@@ -82,8 +82,62 @@ public class Heroes extends Super_X {
             return golpe4;
         }
         System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
+        return 0;   
+    }
+    
+        public int atacarHeroe_5() {
+        if (super.getEnergia() > 0) {
+            System.out.println(super.getNombre()+ " lo lanza en CAIDA LIBRE"
+                + ", le roba 10 puntos de energia a su oponente.");
+            int golpe5;
+            golpe5= 10;
+            if (this.indice_bondad>8) {
+                golpe5+=5;
+                System.out.println("BONUS: Por indice de bondad, le roba 5 puntos más!");
+            }               
+            return golpe5;
+        }
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
+        return 0;        
+    }
+    
+    
+    public int atacarHeroe_6() {        
+        if (super.getEnergia() > 0) {
+            System.out.println(super.getNombre()+ " lo ataca tomándolo entre sus GARRAS"
+                    + ", le roba 5 puntos de energia a su oponente.");
+            int golpe6;
+            golpe6 = 5;        
+            return golpe6;
+        }
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;
-        
+    }
+    
+    
+    public int atacarHeroe_7() {    
+        if (super.getEnergia() > 0) {
+            System.out.println(super.getNombre()+ " lo ataca con su PICO DESGARRADOR"
+                + ", le roba 15 puntos de energia a su oponente.");
+            int golpe7;
+            golpe7 = 15;        
+            return golpe7;
+        }
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
+        return 0;
+    }
+    
+    
+    public int atacarHeroe_8() {    
+        if (super.getEnergia() > 0) {
+            System.out.println(super.getNombre()+ " lo ataca con sus OJOS LÁSER"
+                + ", le roba 25 puntos de energia a su oponente.");
+            int golpe8;
+            golpe8 = 25;        
+            return golpe8;
+        }
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
+        return 0;   
     }
        
 }
