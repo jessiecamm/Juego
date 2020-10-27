@@ -30,40 +30,56 @@ public class Villanos extends Super_X {
     }
     
     //Métodos de ataque de Villanos    
-    public int atacarVillano_1() {   
-        System.out.println(super.getNombre()+ " lo ataca con sus LAZOS DE SPAGUETTI"
-                + ", le roba 28 puntos de energia a su oponente.");
-        int golpe1;
-        golpe1 = 28;
-        return golpe1;
+    public int atacarVillano_1() {
+        if (super.getEnergia() > 0) {
+            System.out.println(super.getNombre()+ " lo ataca con sus LAZOS DE SPAGUETTI"
+                    + ", le roba 28 puntos de energia a su oponente.");
+            int golpe1;
+            golpe1 = 28;
+            return golpe1;
+        }
+        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        return 0;
     }
     
     public int atacarVillano_2() {        
-        System.out.println(super.getNombre()+ " lo ataca con su PIZZA BOOMERANG"
-                + ", le roba 12 puntos de energia a su oponente.");
-        int golpe2;
-        golpe2 = 12;
-        return golpe2;
+        if (super.getEnergia() > 0) {
+            System.out.println(super.getNombre()+ " lo ataca con su PIZZA BOOMERANG"
+                    + ", le roba 12 puntos de energia a su oponente.");
+            int golpe2;
+            golpe2 = 12;
+            return golpe2;
+        }
+        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        return 0;
     }
     
     public int atacarVillano_3() {        
-        System.out.println(super.getNombre()+ " lo ataca VOLANDO MUY ALTO"
-                + ", le roba 11 puntos de energia a su oponente.");
-        int golpe3;
-        golpe3 = 11;
-        if (this.indice_maldad>8) {
-            golpe3+=5;
-            System.out.println("Por indice de maldad le roba 5 puntos más!");
+        if (super.getEnergia() > 0) {
+            System.out.println(super.getNombre()+ " lo ataca VOLANDO MUY ALTO"
+                    + ", le roba 11 puntos de energia a su oponente.");
+            int golpe3;
+            golpe3 = 11;
+            if (this.indice_maldad>8) {
+                golpe3+=5;
+                System.out.println("Por indice de maldad le roba 5 puntos más!");
+            }            
+            return golpe3;
         }
-        return golpe3;
+        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        return 0;
     }
     
     public int atacarVillano_4() {        
-        System.out.println(super.getNombre()+ " lo ataca con sus BALA-TUNAS"
-                + ", le roba 35 puntos de energia a su oponente.");
-        int golpe4;
-        golpe4 = 35;
-        return golpe4;
+        if (super.getEnergia() > 0) {
+            System.out.println(super.getNombre()+ " lo ataca con sus BALA-TUNAS"
+                    + ", le roba 35 puntos de energia a su oponente.");
+            int golpe4;
+            golpe4 = 35;
+            return golpe4;
+        }
+        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        return 0;
     }   
     
 }
