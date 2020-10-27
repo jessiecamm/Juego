@@ -46,7 +46,6 @@ public class Heroes extends Super_X {
         return 0;        
     }
     
-    
     public int atacarHeroe_2() {        
         if (super.getEnergia() > 0) {
             System.out.println(super.getNombre()+ " lo ataca con su GUITARRA ULTRA DISTORSIONADA"
@@ -59,7 +58,6 @@ public class Heroes extends Super_X {
         return 0;
     }
     
-    
     public int atacarHeroe_3() {    
         if (super.getEnergia() > 0) {
             System.out.println(super.getNombre()+ " lo ataca con una PATADA EN LOS DIENTES"
@@ -71,7 +69,6 @@ public class Heroes extends Super_X {
         System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;
     }
-    
     
     public int atacarHeroe_4() {    
         if (super.getEnergia() > 0) {
@@ -101,7 +98,6 @@ public class Heroes extends Super_X {
         return 0;        
     }
     
-    
     public int atacarHeroe_6() {        
         if (super.getEnergia() > 0) {
             System.out.println(super.getNombre()+ " lo ataca tomándolo entre sus GARRAS"
@@ -113,7 +109,6 @@ public class Heroes extends Super_X {
         System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;
     }
-    
     
     public int atacarHeroe_7() {    
         if (super.getEnergia() > 0) {
@@ -127,7 +122,6 @@ public class Heroes extends Super_X {
         return 0;
     }
     
-    
     public int atacarHeroe_8() {    
         if (super.getEnergia() > 0) {
             System.out.println(super.getNombre()+ " lo ataca con sus OJOS LÁSER"
@@ -138,6 +132,5 @@ public class Heroes extends Super_X {
         }
         System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;   
-    }
-       
+    }    
 }
