@@ -38,7 +38,7 @@ public class Villanos extends Super_X {
             golpe1 = 28;
             return golpe1;
         }
-        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;
     }
     
@@ -50,7 +50,7 @@ public class Villanos extends Super_X {
             golpe2 = 12;
             return golpe2;
         }
-        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;
     }
     
@@ -62,11 +62,11 @@ public class Villanos extends Super_X {
             golpe3 = 11;
             if (this.indice_maldad>8) {
                 golpe3+=5;
-                System.out.println("Por indice de maldad le roba 5 puntos más!");
+                System.out.println("BONUS: Por indice de maldad le roba 5 puntos más!");
             }            
             return golpe3;
         }
-        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;
     }
     
@@ -78,7 +78,7 @@ public class Villanos extends Super_X {
             golpe4 = 35;
             return golpe4;
         }
-        System.out.println(super.getNombre()+" YOU'RE FUCKIN' DEAD!!!");
+        System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;
     }   
     

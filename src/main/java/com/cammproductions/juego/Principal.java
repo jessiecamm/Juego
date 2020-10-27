@@ -61,6 +61,7 @@ public class Principal {
         System.out.println(v2.toString());
         System.out.println("Índice de Maldad > "+ v2.getIndice_maldad());
         System.out.println();
+        System.out.println();
         
         System.out.println("QUÉ COMIENCE EL JUEGO!");     
         System.out.print("Hoy se enfrentan: ");
@@ -126,9 +127,7 @@ public class Principal {
                     break;
                 default:
                     break;                
-            }
-                               
-            //int golpeVillanos = Super_X.generarNumeroAleatorio(minimo, maximo);
+            }             
                     
             switch(golpeVillanos) {
                 case 1:
@@ -164,8 +163,7 @@ public class Principal {
             }
             else if ((energia_actual_Heroes <= 0) && (energia_actual_Villanos > 0)) {
                 System.out.println(v1.getNombre()+ " ha vencido a " + h1.getNombre() + "!! "
-                    + h1.getNombre() + " ha muerto." + " May the forth be with him.");            
-                
+                    + h1.getNombre() + " ha muerto." + " May the forth be with him.");                
             }
             else if((energia_actual_Villanos <=0) && (energia_actual_Heroes <=0)) {
                 System.out.println("Ambos son PERDEDORES, han muerto!!!!"
