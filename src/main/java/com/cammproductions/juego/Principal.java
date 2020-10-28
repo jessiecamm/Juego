@@ -47,7 +47,7 @@ public class Principal {
         v1.setEnergia(100);
         v1.setNombre("Cruela");
         v1.setPais_origen("Italia");
-        v1.setHabilidad_ppal("vuela muy alto");
+        v1.setHabilidad_ppal("Vuela muy alto");
         v1.setIndice_maldad(10);
 
         Villanos v2=new Villanos("Destructor", "Nueva York", "Fuerza extrema",100, 9);
