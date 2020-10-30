@@ -27,19 +27,106 @@ public class Pantalla extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        nuestroPanel = new javax.swing.JPanel();
+        titulo = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        texto_resultado = new javax.swing.JTextArea();
+        boton = new javax.swing.JButton();
+
+        nuestroPanel.setBackground(new java.awt.Color(192, 36, 37));
+        nuestroPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        titulo.setBackground(new java.awt.Color(192, 36, 37));
+        titulo.setFont(new java.awt.Font("Gobold Bold", 1, 24)); // NOI18N
+        titulo.setForeground(new java.awt.Color(255, 255, 255));
+        titulo.setText("Let the Game begin");
+        titulo.setBorder(null);
+        titulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tituloActionPerformed(evt);
+            }
+        });
+
+        texto_resultado.setBackground(new java.awt.Color(192, 36, 37));
+        texto_resultado.setColumns(20);
+        texto_resultado.setFont(new java.awt.Font("Montserrat Medium", 0, 10)); // NOI18N
+        texto_resultado.setForeground(new java.awt.Color(204, 204, 204));
+        texto_resultado.setLineWrap(true);
+        texto_resultado.setRows(5);
+        jScrollPane1.setViewportView(texto_resultado);
+
+        boton.setBackground(new java.awt.Color(0, 0, 0));
+        boton.setFont(new java.awt.Font("Gobold Bold", 0, 14)); // NOI18N
+        boton.setForeground(new java.awt.Color(255, 255, 255));
+        boton.setIcon(new javax.swing.ImageIcon("D:\\My files\\Jess\\WORK\\Cursos\\Programación\\Programación 110mil\\NetBeans Projects\\Trabajo_Colaborativo\\Juego\\click1.png")); // NOI18N
+        boton.setText("Fight!");
+        boton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        boton.setBorderPainted(false);
+        boton.setSelected(true);
+        boton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout nuestroPanelLayout = new javax.swing.GroupLayout(nuestroPanel);
+        nuestroPanel.setLayout(nuestroPanelLayout);
+        nuestroPanelLayout.setHorizontalGroup(
+            nuestroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(nuestroPanelLayout.createSequentialGroup()
+                .addGroup(nuestroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(boton, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(nuestroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(nuestroPanelLayout.createSequentialGroup()
+                            .addGap(335, 335, 335)
+                            .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(nuestroPanelLayout.createSequentialGroup()
+                            .addGap(148, 148, 148)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(155, Short.MAX_VALUE))
+        );
+        nuestroPanelLayout.setVerticalGroup(
+            nuestroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(nuestroPanelLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(boton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(nuestroPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(nuestroPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 17, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void tituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tituloActionPerformed
+
+    private void botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton boton;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel nuestroPanel;
+    private javax.swing.JTextArea texto_resultado;
+    private javax.swing.JTextField titulo;
     // End of variables declaration//GEN-END:variables
 }
