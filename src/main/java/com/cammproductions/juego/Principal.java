@@ -5,6 +5,10 @@
  */
 package com.cammproductions.juego;
 
+import Modelo.Villanos;
+import Modelo.Super_X;
+import Modelo.Heroes;
+
 
 
 /**
