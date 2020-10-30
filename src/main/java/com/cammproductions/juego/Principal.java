@@ -8,6 +8,7 @@ package com.cammproductions.juego;
 import Modelo.Villanos;
 import Modelo.Super_X;
 import Modelo.Heroes;
+import Vista.Pantalla;
 
 
 
@@ -23,13 +24,16 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        Pantalla pantalla1=new Pantalla();
+        pantalla1.setVisible(true);
+        
         System.out.println("Mortal Kombat 2.0");
         System.out.println("By Camm & Marto");
         System.out.println();
         System.out.println("PRESENTACIÓN DE PERSONAJES:");
         System.out.println();
         
-        Heroes h1=new Heroes();
+        /*Heroes h1=new Heroes();
 
         h1.setEnergia(100);
         h1.setPais_origen("Inglaterra");
@@ -173,6 +177,6 @@ public class Principal {
                 System.out.println("Ambos son PERDEDORES, han muerto!!!!"
                     + " Ahora pelean para el más allá. Bienvenidos al mundo ZOMBIE.");                
             }    
-        }
+        }*/
     }
 }
