@@ -27,13 +27,14 @@ public class Principal {
         Pantalla pantalla1=new Pantalla();
         pantalla1.setVisible(true);
         
+        //Esto lo deje acá porque es lo que después quiero que veamos como hacer que se vea siempre
         System.out.println("Mortal Kombat 2.0");
         System.out.println("By Camm & Marto");
         System.out.println();
         System.out.println("PRESENTACIÓN DE PERSONAJES:");
         System.out.println();
         
-        /*Heroes h1=new Heroes();
+        Heroes h1=new Heroes();
 
         h1.setEnergia(100);
         h1.setPais_origen("Inglaterra");
@@ -71,7 +72,7 @@ public class Principal {
         System.out.println();
         System.out.println();
         
-        System.out.println("QUÉ COMIENCE EL JUEGO!");     
+        /*System.out.println("QUÉ COMIENCE EL JUEGO!");     
         System.out.print("Hoy se enfrentan: ");
         int minimo = 1;
         int maximo = 2;        
