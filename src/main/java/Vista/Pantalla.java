@@ -31,15 +31,18 @@ public class Pantalla extends javax.swing.JPanel {
         titulo = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         texto_resultado = new javax.swing.JTextArea();
+        panelVillano = new javax.swing.JLabel();
+        panelHeroe = new javax.swing.JLabel();
         boton = new javax.swing.JButton();
 
         nuestroPanel.setBackground(new java.awt.Color(192, 36, 37));
-        nuestroPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        nuestroPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        nuestroPanel.setPreferredSize(new java.awt.Dimension(700, 542));
 
         titulo.setBackground(new java.awt.Color(192, 36, 37));
-        titulo.setFont(new java.awt.Font("Gobold Bold", 1, 24)); // NOI18N
-        titulo.setForeground(new java.awt.Color(255, 255, 255));
-        titulo.setText("Let the Game begin");
+        titulo.setFont(new java.awt.Font("Ebrima", 1, 30)); // NOI18N
+        titulo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        titulo.setText("LET THE GAME BEGIN");
         titulo.setBorder(null);
         titulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,22 +50,29 @@ public class Pantalla extends javax.swing.JPanel {
             }
         });
 
-        texto_resultado.setBackground(new java.awt.Color(192, 36, 37));
+        texto_resultado.setBackground(new java.awt.Color(153, 0, 0));
         texto_resultado.setColumns(20);
         texto_resultado.setFont(new java.awt.Font("Montserrat Medium", 0, 10)); // NOI18N
-        texto_resultado.setForeground(new java.awt.Color(204, 204, 204));
         texto_resultado.setLineWrap(true);
         texto_resultado.setRows(5);
+        texto_resultado.setBorder(null);
         jScrollPane1.setViewportView(texto_resultado);
 
-        boton.setBackground(new java.awt.Color(0, 0, 0));
-        boton.setFont(new java.awt.Font("Gobold Bold", 0, 14)); // NOI18N
-        boton.setForeground(new java.awt.Color(255, 255, 255));
-        boton.setIcon(new javax.swing.ImageIcon("D:\\My files\\Jess\\WORK\\Cursos\\Programación\\Programación 110mil\\NetBeans Projects\\Trabajo_Colaborativo\\Juego\\click1.png")); // NOI18N
+        panelVillano.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cruela.png"))); // NOI18N
+
+        panelHeroe.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        panelHeroe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rober.png"))); // NOI18N
+
+        boton.setBackground(new java.awt.Color(192, 36, 37));
+        boton.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        boton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/click.png"))); // NOI18N
         boton.setText("Fight!");
-        boton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        boton.setBorder(null);
         boton.setBorderPainted(false);
+        boton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        boton.setPreferredSize(new java.awt.Dimension(62, 29));
         boton.setSelected(true);
+        boton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/click.png"))); // NOI18N
         boton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonActionPerformed(evt);
@@ -73,59 +83,61 @@ public class Pantalla extends javax.swing.JPanel {
         nuestroPanel.setLayout(nuestroPanelLayout);
         nuestroPanelLayout.setHorizontalGroup(
             nuestroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(nuestroPanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nuestroPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(nuestroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(boton, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(nuestroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(nuestroPanelLayout.createSequentialGroup()
-                            .addGap(335, 335, 335)
-                            .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(nuestroPanelLayout.createSequentialGroup()
-                            .addGap(148, 148, 148)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(155, Short.MAX_VALUE))
+                    .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(nuestroPanelLayout.createSequentialGroup()
+                        .addComponent(panelVillano)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(boton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelHeroe, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         nuestroPanelLayout.setVerticalGroup(
             nuestroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(nuestroPanelLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(nuestroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panelVillano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelHeroe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(boton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(nuestroPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(nuestroPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 893, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(nuestroPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 17, Short.MAX_VALUE))
+            .addComponent(nuestroPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void tituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tituloActionPerformed
 
     private void botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonActionPerformed
+
+    private void tituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tituloActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton boton;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel nuestroPanel;
+    private javax.swing.JLabel panelHeroe;
+    private javax.swing.JLabel panelVillano;
     private javax.swing.JTextArea texto_resultado;
     private javax.swing.JTextField titulo;
     // End of variables declaration//GEN-END:variables
