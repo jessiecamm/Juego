@@ -23,9 +23,9 @@ public class Principal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        /*
         Pantalla pantalla1=new Pantalla();
-        pantalla1.setVisible(true);
+        pantalla1.setVisible(true);*/
         
         //Esto lo deje acá porque es lo que después quiero que veamos como hacer que se vea siempre
         System.out.println("Mortal Kombat 2.0");
@@ -35,7 +35,6 @@ public class Principal {
         System.out.println();
         
         Heroes h1=new Heroes();
-
         h1.setEnergia(100);
         h1.setPais_origen("Inglaterra");
         h1.setNombre("Rober-Tone");
@@ -71,6 +70,79 @@ public class Principal {
         System.out.println("Índice de Maldad > "+ v2.getIndice_maldad());
         System.out.println();
         System.out.println();
+        
+        //Lista de luchadores
+        String [] lista = new String [4];
+        
+        lista[0]="Rober-Tone";
+        lista[1]="Halcon Del Desierto";        
+        lista[2]="Cruela";
+        lista[3]="Destructor";
+        
+        System.out.println("Presentando a los Luchadores:\n");
+        for (int i=0; i<4; i++) {                                      
+            System.out.println((i+1) + " "+lista[i]);
+        }
+                
+        //Elección al azar de los luchadores
+        int numMin = 1;     //el indice minimo de la lista
+        int numMax = 4;    //el indice maximo de la lista        
+        int luch1 = (int)Math.floor(Math.random()*(numMax - numMin +1)+(numMin));            
+        int luch2 = (int)Math.floor(Math.random()*(numMax - numMin +1)+(numMin));
+        
+        //Validar para no repetir personajes
+        if (luch1 == luch2) {
+            luch2 = (int)Math.floor(Math.random()*(numMax - numMin +1)+(numMin));                
+        }
+        System.out.println();
+        System.out.println("QUÉ COMIENCE EL JUEGO!");     
+        System.out.println("Hoy se enfrentan...");                 
+        
+        switch(luch1) {
+            case 1:
+                System.out.print("Combate: "+lista[0]);                
+                lista[0]=h1.getNombre();                
+                break;
+            case 2:
+                System.out.print("Combate: "+lista[1]);
+                lista[1]=h2.getNombre();
+                break;                
+            case 3:
+                System.out.print("Combate: "+lista[2]);
+                lista[2]=v1.getNombre();
+                break;
+            case 4:
+                System.out.print("Combate: "+lista[3]);
+                lista[3]=v2.getNombre();
+                break;
+            default:
+                System.out.println("¡Error!");
+                break;                
+        }       
+        
+        switch(luch2) {
+            case 1:
+                System.out.println(" vs. "+lista[0]);
+                lista[0]=h1.getNombre();
+                break;
+            case 2:
+                System.out.println(" vs. "+lista[1]);
+                lista[1]=h2.getNombre();
+                break;                
+            case 3:
+                System.out.println(" vs. "+lista[2]);
+                lista[2]=v1.getNombre();
+                break;
+            case 4:
+                System.out.println(" vs. "+lista[3]);
+                lista[3]=v2.getNombre();
+                break;
+            default:
+                System.out.println("¡Error!");
+                break;                
+        }
+        
+        
         
         /*System.out.println("QUÉ COMIENCE EL JUEGO!");     
         System.out.print("Hoy se enfrentan: ");

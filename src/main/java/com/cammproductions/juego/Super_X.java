@@ -19,19 +19,11 @@ public class Super_X {
     public Super_X() {
     }
 
-    public Super_X(String nombre, String pais_origen, String habilidad_ppal, int energia) {
-        this.energia = energia;
+    public Super_X(String nombre, String pais_origen, String habilidad_ppal) {
+        this.energia = 100;
         this.nombre = nombre;
         this.pais_origen = pais_origen;
         this.habilidad_ppal = habilidad_ppal;
-    }
-
-    public int getEnergia() {
-        return energia;
-    }
-
-    public void setEnergia(int energia) {
-        this.energia = energia;
     }    
 
      public String getNombre() {
@@ -60,26 +52,8 @@ public class Super_X {
 
     @Override
     public String toString() {
-        return ">>>> " + nombre + " es de " + pais_origen + 
-                ", su principal habilidad es " + habilidad_ppal + '.';
-    }
-
-    //Método para generar número aleatorio
-    /**
-     *
-     * @param minimo
-     * @param maximo
-     * @return
-     */    
-    public static int generarNumeroAleatorio(int minimo,int maximo) {        
-        int num =(int)Math.floor(Math.random()*(maximo-minimo+1)+(minimo));
-        return num;
-    }
-   
-
-    //Método debilitar
-    public int debilitar(int golpe) {       
-        this.energia-= golpe;        
-        return this.energia;
-    }
+        return "Super X >>> " + nombre + " - Pais de origen: " + pais_origen + 
+                " - Habilidad principal: " + habilidad_ppal + '.';
+    }    
+    
 }
