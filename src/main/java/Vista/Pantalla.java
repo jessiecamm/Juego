@@ -36,7 +36,9 @@ public class Pantalla extends javax.swing.JPanel {
         boton = new javax.swing.JButton();
 
         nuestroPanel.setBackground(new java.awt.Color(192, 36, 37));
+        nuestroPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         nuestroPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        nuestroPanel.setFocusCycleRoot(true);
         nuestroPanel.setPreferredSize(new java.awt.Dimension(700, 542));
 
         titulo.setBackground(new java.awt.Color(192, 36, 37));
@@ -67,11 +69,10 @@ public class Pantalla extends javax.swing.JPanel {
         boton.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         boton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/click.png"))); // NOI18N
         boton.setText("Fight!");
-        boton.setBorder(null);
-        boton.setBorderPainted(false);
+        boton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         boton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        boton.setOpaque(false);
         boton.setPreferredSize(new java.awt.Dimension(62, 29));
-        boton.setSelected(true);
         boton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/click.png"))); // NOI18N
         boton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,14 +109,14 @@ public class Pantalla extends javax.swing.JPanel {
                     .addComponent(jScrollPane1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(boton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(nuestroPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 893, Short.MAX_VALUE)
+            .addComponent(nuestroPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 895, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
