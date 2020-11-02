@@ -65,15 +65,17 @@ public class Pantalla extends javax.swing.JPanel {
         panelHeroe.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         panelHeroe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rober.png"))); // NOI18N
 
-        boton.setBackground(new java.awt.Color(192, 36, 37));
+        boton.setBackground(new java.awt.Color(0, 0, 0));
         boton.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        boton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/click.png"))); // NOI18N
+        boton.setForeground(new java.awt.Color(255, 255, 255));
+        boton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/click1.png"))); // NOI18N
         boton.setText("Fight!");
-        boton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        boton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        boton.setContentAreaFilled(false);
         boton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        boton.setOpaque(false);
+        boton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        boton.setIconTextGap(6);
         boton.setPreferredSize(new java.awt.Dimension(62, 29));
-        boton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/click.png"))); // NOI18N
         boton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonActionPerformed(evt);
@@ -143,3 +145,4 @@ public class Pantalla extends javax.swing.JPanel {
     private javax.swing.JTextField titulo;
     // End of variables declaration//GEN-END:variables
 }
+
