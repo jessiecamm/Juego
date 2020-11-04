@@ -75,6 +75,7 @@ public class Pantalla extends javax.swing.JPanel {
         boton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         boton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         boton.setIconTextGap(6);
+        boton.setOpaque(true);
         boton.setPreferredSize(new java.awt.Dimension(62, 29));
         boton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
