@@ -21,8 +21,7 @@ public class Pantalla extends javax.swing.JPanel {
      * Creates new form Pantalla
      */
     public Pantalla() {
-        initComponents();
-        
+        initComponents();  
     }
 
     /**
