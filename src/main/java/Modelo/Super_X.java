@@ -60,7 +60,7 @@ public class Super_X {
 
     @Override
     public String toString() {
-        return ">>>> " + nombre + " es de " + pais_origen + 
+        return " >>> " + nombre + " es de " + pais_origen + 
                 ", su principal habilidad es " + habilidad_ppal + '.';
     }
 
