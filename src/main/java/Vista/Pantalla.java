@@ -21,6 +21,7 @@ public class Pantalla extends javax.swing.JPanel {
      */
     public Pantalla() {
         initComponents();
+        
     }
 
     /**
@@ -131,12 +132,11 @@ public class Pantalla extends javax.swing.JPanel {
             .addComponent(nuestroPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
     private void botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActionPerformed
         //Esto lo deje acá porque es lo que después quiero que veamos como hacer que se vea siempre
-        System.out.println("Mortal Kombat 2.0");
         texto_resultado.setText("Mortal Kombat 2.0");        
-        System.out.println("By Camm & Marto");
         texto_resultado.append("\nBy Camm & Marto");
         System.out.println();        
         

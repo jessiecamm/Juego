@@ -24,5 +24,9 @@ public class Principal {
         Pantalla pantalla1=new Pantalla();
         pantalla1.setVisible(true);
         
-}        
+        System.out.println("Mortal Kombat 2.0");      
+        System.out.println("By Camm & Marto");
+        System.out.println();        
+        
+    }    
 }
