@@ -6,6 +6,7 @@
 package com.cammproductions.juego;
 
 import Vista.Pantalla;
+import Vista.rePantalla;
 
 /**
  *
@@ -19,7 +20,7 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Pantalla pantalla1=new Pantalla();
+        rePantalla pantalla1=new rePantalla();
         pantalla1.setVisible(true);
         
         System.out.println("Mortal Kombat 2.0");      
