@@ -42,7 +42,7 @@ public class rePantalla extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(192, 36, 37));
 
         titulo.setBackground(new java.awt.Color(192, 36, 37));
-        titulo.setFont(new java.awt.Font("Ebrima", 1, 30)); // NOI18N
+        titulo.setFont(new java.awt.Font("Ebrima", 1, 40)); // NOI18N
         titulo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         titulo.setText("LET THE GAME BEGIN");
         titulo.setBorder(null);
@@ -63,7 +63,7 @@ public class rePantalla extends javax.swing.JFrame {
         jScrollPane1.setViewportView(texto_resultado);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Impact", 0, 20)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("FIGHT!");
         jButton1.setBorderPainted(false);
@@ -78,16 +78,18 @@ public class rePantalla extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(124, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(267, 267, 267))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(168, 168, 168))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 566, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,35 +97,35 @@ public class rePantalla extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52))
+                .addGap(64, 64, 64))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 140, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tituloActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        texto_resultado.setText("Mortal Kombat 2.0\n");        
+        texto_resultado.setText("Mortal Kombat 2.0\n");
         texto_resultado.append("By Camm & Marto\n");
-                
+
         //Creación de Heroes
         Heroes h1=new Heroes();
         h1.setEnergia(100);
@@ -131,9 +133,9 @@ public class rePantalla extends javax.swing.JFrame {
         h1.setNombre("Rober-Tone");
         h1.setHabilidad_ppal("Decibeles Mortales");
         h1.setIndice_bondad(9);
-        
-        Heroes h2=new Heroes("Halcón del desierto","Nueva Zelanda", "Ojos láser", 100, 8);        
-        
+
+        Heroes h2=new Heroes("Halcón del desierto","Nueva Zelanda", "Ojos láser", 100, 8);
+
         //Creación de Villanos
         Villanos v1=new Villanos();
         v1.setEnergia(100);
@@ -141,115 +143,115 @@ public class rePantalla extends javax.swing.JFrame {
         v1.setPais_origen("Italia");
         v1.setHabilidad_ppal("Vuela muy alto");
         v1.setIndice_maldad(10);
-        
-        Villanos v2=new Villanos("Destructor", "Nueva York", "Fuerza extrema",100, 9);        
-        
+
+        Villanos v2=new Villanos("Destructor", "Nueva York", "Fuerza extrema",100, 9);
+
         texto_resultado.append("\nPRESENTACIÓN DE PERSONAJES: \n");
-        
+
         texto_resultado.append("\n\nHEROES:\n");
         texto_resultado.append(h1.toString()+ "\n");
         texto_resultado.append("Índice de Bondad > "+ h1.getIndice_bondad()+ "\n");
-                
+
         texto_resultado.append(h2.toString()+ "\n");
         texto_resultado.append("Índice de Bondad > "+ h2.getIndice_bondad()+ "\n");
-        
+
         texto_resultado.append("\n\nVILLANOS:\n");
         texto_resultado.append(v1.toString()+ "\n");
         texto_resultado.append("Índice de Maldad > "+ v1.getIndice_maldad()+ "\n");
-        
+
         texto_resultado.append(v2.toString() + "\n");
         texto_resultado.append("Índice de Maldad > "+ v2.getIndice_maldad()+ "\n");
-        
-        texto_resultado.append("\n\nQUÉ COMIENCE EL JUEGO!\n\n");     
+
+        texto_resultado.append("\n\nQUÉ COMIENCE EL JUEGO!\n\n");
         texto_resultado.append("Hoy se enfrentan:\n ");
         int minimo = 1;
-        int maximo = 2;   
-        
+        int maximo = 2;
+
         int luchador1 = Heroes.generarNumeroAleatorio(minimo, maximo);
         switch(luchador1) {
             case 1:
-                texto_resultado.append(h1.getNombre()+ " vs. ");                              
-                break;
+            texto_resultado.append(h1.getNombre()+ " vs. ");
+            break;
             case 2:
-                texto_resultado.append(h2.getNombre()+ " vs. ");                
-                break;
+            texto_resultado.append(h2.getNombre()+ " vs. ");
+            break;
             default:
-                break;            
+            break;
         }
-        
+
         int luchador2 = Villanos.generarNumeroAleatorio(minimo, maximo);
         switch(luchador2)  {
             case 1:
-                texto_resultado.append(v1.getNombre());                
-                texto_resultado.append("\nAmbos comienzan el encuentro con una energía del 100%\n\n");
-                break;
+            texto_resultado.append(v1.getNombre());
+            texto_resultado.append("\nAmbos comienzan el encuentro con una energía del 100%\n\n");
+            break;
             case 2:
-                texto_resultado.append(v2.getNombre());
-                texto_resultado.append("\nAmbos comienzan el encuentro con una energía del 100%\n\n");
-                break;
+            texto_resultado.append(v2.getNombre());
+            texto_resultado.append("\nAmbos comienzan el encuentro con una energía del 100%\n\n");
+            break;
             default:
-                break;
-        }           
-                            
+            break;
+        }
+
         texto_resultado.append("LET'S FIGHT!\n\n");
-        
-            while ((h1.getEnergia() > 0) && (v1.getEnergia() > 0)) {            
+
+        while ((h1.getEnergia() > 0) && (v1.getEnergia() > 0)) {
             minimo = 1;
             maximo = 4;
             int golpeHeroes = Super_X.generarNumeroAleatorio(minimo, maximo);
             int golpeVillanos = Super_X.generarNumeroAleatorio(minimo, maximo);
-            int golpe;      
-        
+            int golpe;
+
             switch(golpeHeroes) {
                 case 1:
-                    golpe = h1.debilitar(v1.atacarVillano_1());
-                    texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
-                    break;
+                golpe = h1.debilitar(v1.atacarVillano_1());
+                texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
+                break;
                 case 2:
-                    golpe = h1.debilitar(v1.atacarVillano_2());
-                    texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
-                    break;
+                golpe = h1.debilitar(v1.atacarVillano_2());
+                texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
+                break;
                 case 3:
-                    golpe = h1.debilitar(v1.atacarVillano_3());
-                    texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
-                    break;
+                golpe = h1.debilitar(v1.atacarVillano_3());
+                texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
+                break;
                 case 4:
-                    golpe = h1.debilitar(v1.atacarVillano_4());
-                    texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
-                    break;
+                golpe = h1.debilitar(v1.atacarVillano_4());
+                texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
+                break;
                 default:
-                    break;
+                break;
             }
             switch(golpeVillanos) {
                 case 1:
-                    golpe = v1.debilitar(h1.atacarHeroe_1());
-                    texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
-                    texto_resultado.append("***************************************************************************\n\n");
-                    break;
+                golpe = v1.debilitar(h1.atacarHeroe_1());
+                texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
+                texto_resultado.append("***************************************************************************\n\n");
+                break;
                 case 2:
-                    golpe = v1.debilitar(h1.atacarHeroe_2());
-                    texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
-                    texto_resultado.append("***************************************************************************\n\n");
-                    break;
+                golpe = v1.debilitar(h1.atacarHeroe_2());
+                texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
+                texto_resultado.append("***************************************************************************\n\n");
+                break;
                 case 3:
-                    golpe = v1.debilitar(h1.atacarHeroe_3());
-                    texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
-                    texto_resultado.append("***************************************************************************\n\n");
-                    break;
+                golpe = v1.debilitar(h1.atacarHeroe_3());
+                texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
+                texto_resultado.append("***************************************************************************\n\n");
+                break;
                 case 4:
-                    golpe = v1.debilitar(h1.atacarHeroe_4());
-                    texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
-                    texto_resultado.append("***************************************************************************\n\n");
-                    break;
+                golpe = v1.debilitar(h1.atacarHeroe_4());
+                texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
+                texto_resultado.append("***************************************************************************\n\n");
+                break;
                 default:
-                    break;
+                break;
             }
-            
+
             int energia_actual_Villanos=v1.getEnergia();
             int energia_actual_Heroes=h1.getEnergia();
             if ((energia_actual_Villanos <= 0) && (energia_actual_Heroes > 0)) {
                 texto_resultado.append(h1.getNombre()+ " ha vencido a " + v1.getNombre() + "!! \n");
-                texto_resultado.append(v1.getNombre() + " ha muerto.\n"); 
+                texto_resultado.append(v1.getNombre() + " ha muerto.\n");
                 texto_resultado.append(" May the forth be with her.\n\n");
             }
             else if ((energia_actual_Heroes <= 0) && (energia_actual_Villanos > 0)) {
@@ -263,6 +265,10 @@ public class rePantalla extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void tituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tituloActionPerformed
 
     /**
      * @param args the command line arguments
