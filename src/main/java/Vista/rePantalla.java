@@ -67,10 +67,12 @@ public class rePantalla extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Impact", 0, 20)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon("D:\\My files\\Jess\\WORK\\Cursos\\Programación\\Programación 110mil\\NetBeans Projects\\Trabajo_Colaborativo\\Juego\\src\\main\\Recursos\\click1.png")); // NOI18N
         jButton1.setText("FIGHT!");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton1.setBorderPainted(false);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
