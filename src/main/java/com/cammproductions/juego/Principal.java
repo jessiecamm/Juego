@@ -29,7 +29,8 @@ public class Principal {
         texto_resultado.setText("Mortal Kombat 2.0");        
         texto_resultado.append("\nBy Camm & Marto");
                 
-        
+    
+
         //Creación de Heroes
         Heroes h1=new Heroes();
         h1.setEnergia(100);
