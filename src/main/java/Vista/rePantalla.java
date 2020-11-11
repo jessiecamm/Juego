@@ -8,6 +8,10 @@ package Vista;
 import Modelo.Heroes;
 import Modelo.Super_X;
 import Modelo.Villanos;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 /**
  *
@@ -38,6 +42,8 @@ public class rePantalla extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        heroe_label = new javax.swing.JLabel();
+        villano_label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,62 +89,93 @@ public class rePantalla extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon("D:\\My files\\Jess\\WORK\\Cursos\\Programación\\Programación 110mil\\NetBeans Projects\\Trabajo_Colaborativo\\Juego\\src\\main\\Recursos\\cruela.png")); // NOI18N
 
+        heroe_label.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        heroe_label.setForeground(new java.awt.Color(255, 255, 255));
+        heroe_label.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        heroe_label.setText("Victorias by CRUELA");
+
+        villano_label.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        villano_label.setForeground(new java.awt.Color(255, 255, 255));
+        villano_label.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        villano_label.setText("Victorias by ROBER-TONE");
+        villano_label.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        villano_label.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addContainerGap(42, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(heroe_label, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(91, 91, 91))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addComponent(jLabel2)
+                        .addGap(27, 27, 27))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(villano_label, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jScrollPane1)
-                            .addGap(18, 18, 18)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel1)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(villano_label, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(heroe_label, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+  
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         texto_resultado.setText("Mortal Kombat 2.0\n");
         texto_resultado.append("By Camm & Marto\n");
 
+        try {
+            FileInputStream sonido;
+            sonido=new FileInputStream ("D:\\My files\\Jess\\WORK\\Cursos\\Programación\\Programación 110mil\\NetBeans Projects\\Trabajo_Colaborativo\\Juego\\src\\main\\Recursos\\B2FTwinkle.mp3");
+            Player p=new Player(sonido);
+            p.play();        
+        } catch(FileNotFoundException | JavaLayerException e){
+            System.out.println("ERROR");
+        }
+    
         //Creación de Heroes
         Heroes h1=new Heroes();
         h1.setEnergia(100);
@@ -266,11 +303,13 @@ public class rePantalla extends javax.swing.JFrame {
                 texto_resultado.append(h1.getNombre()+ " ha vencido a " + v1.getNombre() + "!! \n");
                 texto_resultado.append(v1.getNombre() + " ha muerto.\n");
                 texto_resultado.append(" May the forth be with her.\n\n");
+                victoriasHeroes_txt.setText(victoriasHeroes.getText()+"*");
             }
             else if ((energia_actual_Heroes <= 0) && (energia_actual_Villanos > 0)) {
                 texto_resultado.append(v1.getNombre()+ " ha vencido a " + h1.getNombre() + "!! \n");
                 texto_resultado.append(h1.getNombre() + " ha muerto.\n");
                 texto_resultado.append(" May the forth be with him.\n\n");
+                victoriasVillanos_txt.setText(victoriasVillanos.getText()+"*");
             }
             else if((energia_actual_Villanos <=0) && (energia_actual_Heroes <=0)) {
                 texto_resultado.append("Ambos son PERDEDORES, han muerto!!!!\n");
@@ -320,6 +359,7 @@ public class rePantalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel heroe_label;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -327,5 +367,6 @@ public class rePantalla extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea texto_resultado;
     private javax.swing.JTextField titulo;
+    private javax.swing.JLabel villano_label;
     // End of variables declaration//GEN-END:variables
 }
