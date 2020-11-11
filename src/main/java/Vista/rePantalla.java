@@ -73,7 +73,7 @@ public class rePantalla extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Impact", 0, 20)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon("D:\\My files\\Jess\\WORK\\Cursos\\Programación\\Programación 110mil\\NetBeans Projects\\Trabajo_Colaborativo\\Juego\\src\\main\\Recursos\\click1.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Marto\\Documents\\NetBeansProjects\\Juego\\src\\main\\Recursos\\click1.png")); // NOI18N
         jButton1.setText("FIGHT!");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton1.setBorderPainted(false);
@@ -85,9 +85,9 @@ public class rePantalla extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\My files\\Jess\\WORK\\Cursos\\Programación\\Programación 110mil\\NetBeans Projects\\Trabajo_Colaborativo\\Juego\\src\\main\\Recursos\\Rober.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Marto\\Documents\\NetBeansProjects\\Juego\\src\\main\\Recursos\\Rober.png")); // NOI18N
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\My files\\Jess\\WORK\\Cursos\\Programación\\Programación 110mil\\NetBeans Projects\\Trabajo_Colaborativo\\Juego\\src\\main\\Recursos\\cruela.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Marto\\Documents\\NetBeansProjects\\Juego\\src\\main\\Recursos\\cruela.png")); // NOI18N
 
         heroe_label.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         heroe_label.setForeground(new java.awt.Color(255, 255, 255));
@@ -129,6 +129,7 @@ public class rePantalla extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
+
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(villano_label, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)

@@ -95,6 +95,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
+
               </Group>
           </Group>
         </DimensionLayout>
@@ -159,7 +160,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\My files\Jess\WORK\Cursos\Programaci&#xf3;n\Programaci&#xf3;n 110mil\NetBeans Projects\Trabajo_Colaborativo\Juego\src\main\Recursos\click1.png"/>
+              <Image iconType="2" name="C:\Users\Marto\Documents\NetBeansProjects\Juego\src\main\Recursos\click1.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="FIGHT!"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -180,14 +181,14 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\My files\Jess\WORK\Cursos\Programaci&#xf3;n\Programaci&#xf3;n 110mil\NetBeans Projects\Trabajo_Colaborativo\Juego\src\main\Recursos\Rober.png"/>
+              <Image iconType="2" name="C:\Users\Marto\Documents\NetBeansProjects\Juego\src\main\Recursos\Rober.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\My files\Jess\WORK\Cursos\Programaci&#xf3;n\Programaci&#xf3;n 110mil\NetBeans Projects\Trabajo_Colaborativo\Juego\src\main\Recursos\cruela.png"/>
+              <Image iconType="2" name="C:\Users\Marto\Documents\NetBeansProjects\Juego\src\main\Recursos\cruela.png"/>
             </Property>
           </Properties>
         </Component>
