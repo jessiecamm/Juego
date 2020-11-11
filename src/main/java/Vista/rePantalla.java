@@ -10,6 +10,8 @@ import Modelo.Super_X;
 import Modelo.Villanos;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 
@@ -44,11 +46,14 @@ public class rePantalla extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         heroe_label = new javax.swing.JLabel();
         villano_label = new javax.swing.JLabel();
+        victoriasVillanos = new javax.swing.JLabel();
+        victoriasHeroes = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(192, 36, 37));
 
+        titulo.setEditable(false);
         titulo.setBackground(new java.awt.Color(192, 36, 37));
         titulo.setFont(new java.awt.Font("Ebrima", 1, 40)); // NOI18N
         titulo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -106,35 +111,43 @@ public class rePantalla extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(heroe_label, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(victoriasVillanos, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(jLabel2)
-                        .addGap(27, 27, 27))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(villano_label, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(heroe_label, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(82, 82, 82)
+                                .addComponent(jLabel2)
+                                .addGap(27, 27, 27))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(villano_label, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(victoriasHeroes, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(139, 139, 139))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(villano_label, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(heroe_label, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(victoriasHeroes)
+                .addGap(21, 21, 21)
+                .addComponent(victoriasVillanos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,16 +178,19 @@ public class rePantalla extends javax.swing.JFrame {
   
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
         texto_resultado.setText("Mortal Kombat 2.0\n");
         texto_resultado.append("By Camm & Marto\n");
 
         try {
             FileInputStream sonido;
-            sonido=new FileInputStream ("D:\\My files\\Jess\\WORK\\Cursos\\Programación\\Programación 110mil\\NetBeans Projects\\Trabajo_Colaborativo\\Juego\\src\\main\\Recursos\\B2FTwinkle.mp3");
+            sonido=new FileInputStream ("C:\\Users\\Marto\\Documents\\NetBeansProjects\\Juego\\src\\main\\Recursos\\B2FTwinkle.mp3");
             Player p=new Player(sonido);
             p.play();        
-        } catch(FileNotFoundException | JavaLayerException e){
+        } catch(FileNotFoundException e){
             System.out.println("ERROR");
+        } catch (JavaLayerException ex) {
+            Logger.getLogger(rePantalla.class.getName()).log(Level.SEVERE, null, ex);
         }
     
         //Creación de Heroes
@@ -256,18 +272,27 @@ public class rePantalla extends javax.swing.JFrame {
             switch(golpeHeroes) {
                 case 1:
                 golpe = h1.debilitar(v1.atacarVillano_1());
+                texto_resultado.append(v1.getNombre()+ " lo ataca con sus LAZOS DE SPAGUETTI"
+                    + ", le roba 28 puntos de energia a su oponente.");
                 texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
                 break;
                 case 2:
                 golpe = h1.debilitar(v1.atacarVillano_2());
+                texto_resultado.append(v1.getNombre()+ " lo ataca con su PIZZA BOOMERANG"
+                    + ", le roba 12 puntos de energia a su oponente.");
                 texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
                 break;
                 case 3:
                 golpe = h1.debilitar(v1.atacarVillano_3());
+                texto_resultado.append(v1.getNombre()+ " lo ataca VOLANDO MUY ALTO"
+                    + ", le roba 11 puntos de energia a su oponente.");
+                texto_resultado.append("BONUS: Por indice de maldad le roba 5 puntos más!");
                 texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
                 break;
                 case 4:
                 golpe = h1.debilitar(v1.atacarVillano_4());
+                texto_resultado.append(v1.getNombre()+ " lo ataca con sus BALA-TUNAS"
+                    + ", le roba 35 puntos de energia a su oponente.");
                 texto_resultado.append("----- A " + h1.getNombre() + " le queda " +golpe +  "% de energía.\n");
                 break;
                 default:
@@ -276,21 +301,30 @@ public class rePantalla extends javax.swing.JFrame {
             switch(golpeVillanos) {
                 case 1:
                 golpe = v1.debilitar(h1.atacarHeroe_1());
+                texto_resultado.append(h1.getNombre()+ " lo ataca con sus DECIBELES MORTALES"
+                + ", le roba 30 puntos de energia a su oponente.");
+                texto_resultado.append("BONUS: Por indice de bondad, le roba 5 puntos más!");
                 texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
                 texto_resultado.append("***************************************************************************\n\n");
                 break;
                 case 2:
                 golpe = v1.debilitar(h1.atacarHeroe_2());
+                texto_resultado.append(h1.getNombre()+ " lo ataca con su GUITARRA ULTRA DISTORSIONADA"
+                    + ", le roba 10 puntos de energia a su oponente.");
                 texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
                 texto_resultado.append("***************************************************************************\n\n");
                 break;
                 case 3:
                 golpe = v1.debilitar(h1.atacarHeroe_3());
+                texto_resultado.append(h1.getNombre()+ " lo ataca con una PATADA EN LOS DIENTES"
+                + ", le roba 15 puntos de energia a su oponente.");
                 texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
                 texto_resultado.append("***************************************************************************\n\n");
                 break;
                 case 4:
                 golpe = v1.debilitar(h1.atacarHeroe_4());
+                texto_resultado.append(h1.getNombre()+ " lo ataca con su ACOPLE SANGRA OIDOS"
+                + ", le roba 5 puntos de energia a su oponente.");
                 texto_resultado.append("----- A " + v1.getNombre() + " le queda " +golpe +  "% de energía.\n");
                 texto_resultado.append("***************************************************************************\n\n");
                 break;
@@ -304,13 +338,15 @@ public class rePantalla extends javax.swing.JFrame {
                 texto_resultado.append(h1.getNombre()+ " ha vencido a " + v1.getNombre() + "!! \n");
                 texto_resultado.append(v1.getNombre() + " ha muerto.\n");
                 texto_resultado.append(" May the forth be with her.\n\n");
-                victoriasHeroes_txt.setText(victoriasHeroes.getText()+"*");
+                texto_resultado.append(v1.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
+                victoriasHeroes.setText(victoriasHeroes.getText()+"*");                
             }
             else if ((energia_actual_Heroes <= 0) && (energia_actual_Villanos > 0)) {
                 texto_resultado.append(v1.getNombre()+ " ha vencido a " + h1.getNombre() + "!! \n");
                 texto_resultado.append(h1.getNombre() + " ha muerto.\n");
                 texto_resultado.append(" May the forth be with him.\n\n");
-                victoriasVillanos_txt.setText(victoriasVillanos.getText()+"*");
+                texto_resultado.append(h1.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
+                victoriasVillanos.setText(victoriasVillanos.getText()+"*");
             }
             else if((energia_actual_Villanos <=0) && (energia_actual_Heroes <=0)) {
                 texto_resultado.append("Ambos son PERDEDORES, han muerto!!!!\n");
@@ -368,6 +404,8 @@ public class rePantalla extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea texto_resultado;
     private javax.swing.JTextField titulo;
+    private javax.swing.JLabel victoriasHeroes;
+    private javax.swing.JLabel victoriasVillanos;
     private javax.swing.JLabel villano_label;
     // End of variables declaration//GEN-END:variables
 }
