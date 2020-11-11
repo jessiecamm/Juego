@@ -39,7 +39,7 @@ public class Heroes extends Super_X {
             if (this.indice_bondad>8) {
                 golpe1+=5;
                 System.out.println("BONUS: Por indice de bondad, le roba 5 puntos más!");
-            }               
+            } 
             return golpe1;
         }
         System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
@@ -133,4 +133,6 @@ public class Heroes extends Super_X {
         System.out.println(super.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
         return 0;   
     }    
+    
+    
 }
