@@ -353,7 +353,7 @@ public class rePantalla extends javax.swing.JFrame {
                 texto_resultado.append(v1.getNombre() + " ha muerto.\n");
                 texto_resultado.append("May the forth be with her.\n\n");
                 texto_resultado.append(v1.getNombre()+" YOU'RE SO FUCKIN' DEAD DUDE!!");
-                victoriasHeroes.setText(victoriasHeroes.getText()+"♣");                
+                victoriasHeroes.setText(victoriasHeroes.getText()+"♥");                
             }
             else if ((energia_actual_Heroes <= 0) && (energia_actual_Villanos > 0)) {
                 texto_resultado.append(v1.getNombre()+ " ha vencido a " + h1.getNombre() + "!! \n");
