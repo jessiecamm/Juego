@@ -8,10 +8,13 @@ package Vista;
 import Modelo.Heroes;
 import Modelo.Super_X;
 import Modelo.Villanos;
+import java.awt.Image;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 
@@ -199,9 +202,11 @@ public class rePantalla extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         try {
-            FileInputStream sonido;
-            sonido=new FileInputStream ("D:\\My files\\Jess\\WORK\\Cursos\\Programación\\Programación 110mil\\NetBeans Projects\\Trabajo_Colaborativo\\Juego\\src\\main\\Recursos\\MSNZumbido.mp3");
-            Player p=new Player(sonido);
+            File directory = new File (".");
+            System.out.println(directory.getAbsolutePath());
+            FileInputStream zumbido;
+            zumbido=new FileInputStream ("src/main/Recursos/MSNZumbido.mp3");
+            Player p=new Player(zumbido);
             p.play();        
         } catch(FileNotFoundException e){
             System.out.println("ERROR");
@@ -371,6 +376,30 @@ public class rePantalla extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
        
+        ImageIcon image = new ImageIcon ("src/main/Recursos/Rober.png");
+            if (image != null) {
+            jLabel2.setIcon(image);
+            jLabel2.setText("");
+            } else {
+            jLabel2.setText("ERROR");
+            }
+            
+        ImageIcon image1 = new ImageIcon ("src/main/Recursos/cruela.png");
+            if (image1 != null) {
+            jLabel1.setIcon(image);
+            jLabel1.setText("");
+            } else {
+            jLabel1.setText("ERROR");
+            }
+                
+        ImageIcon image2 = new ImageIcon ("src/main/Recursos/click1.png");
+            if (image != null) {
+            jButton1.setIcon(image);
+            jButton1.setText("");
+            } else {
+            jButton1.setText("ERROR");
+            }
+            
         texto_resultado.setText("MORTAL KOMBAT 2.0\n" + "VERSION BY CAMM & MARTO\n\n");
         texto_resultado.append("\nPRESENTACIÓN DE PERSONAJES: \n");
 
@@ -387,9 +416,11 @@ public class rePantalla extends javax.swing.JFrame {
         texto_resultado.append("Tiene un índice de Maldad de 9 powers. \n");
         
         try {
-            FileInputStream sonido;
-            sonido=new FileInputStream ("D:\\My files\\Jess\\WORK\\Cursos\\Programación\\Programación 110mil\\NetBeans Projects\\Trabajo_Colaborativo\\Juego\\src\\main\\Recursos\\B2FTwinkle.mp3");
-            Player p=new Player(sonido);
+            File directory = new File (".");
+            System.out.println(directory.getAbsolutePath());
+            FileInputStream musica;
+            musica=new FileInputStream ("src/main/Recursos/B2FTwinkle.mp3");
+            Player p=new Player(musica);
             p.play();        
         } catch(FileNotFoundException e){
             System.out.println("ERROR");
