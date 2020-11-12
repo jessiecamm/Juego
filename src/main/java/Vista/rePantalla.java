@@ -386,16 +386,16 @@ public class rePantalla extends javax.swing.JFrame {
             
         ImageIcon image1 = new ImageIcon ("src/main/Recursos/cruela.png");
             if (image1 != null) {
-            jLabel1.setIcon(image);
+            jLabel1.setIcon(image1);
             jLabel1.setText("");
             } else {
             jLabel1.setText("ERROR");
             }
                 
         ImageIcon image2 = new ImageIcon ("src/main/Recursos/click1.png");
-            if (image != null) {
-            jButton1.setIcon(image);
-            jButton1.setText("");
+            if (image2 != null) {
+            jButton1.setIcon(image2);
+            jButton1.setText("FIGHT! ");
             } else {
             jButton1.setText("ERROR");
             }
